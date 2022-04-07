@@ -1,7 +1,7 @@
-package dependency
+package hello
 
 import "rsc.io/quote"
 
-func Hello() string {
+func HelloDependency() string {
     return quote.Hello()
 }
