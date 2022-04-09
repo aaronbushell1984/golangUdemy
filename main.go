@@ -5,7 +5,7 @@ import (
 	"github.com/aaronbushell1984/golangUdemy/dependency"
 	"github.com/aaronbushell1984/golangUdemy/exampleimport"
 	"github.com/aaronbushell1984/golangUdemy/module"
-	"github.com/aaronbushell1984/golangUdemy/variadicparameter"
+	"github.com/aaronbushell1984/golangUdemy/variadicparamete	"
 )
 
 func main() {
