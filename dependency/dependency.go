@@ -1,4 +1,4 @@
-package modules_dependencies
+package dependency
 
 import "rsc.io/quote"
 
