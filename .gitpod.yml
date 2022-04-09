@@ -4,7 +4,6 @@ image: gitpod/workspace-full
 tasks:
   - init: go get -v -t -d ./...
 
-
 vscode:
   extensions:
     - golang.go
