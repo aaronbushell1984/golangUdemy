@@ -1,6 +1,9 @@
 package examplefmt
 
-import "testing"
+import (
+	"bytes"
+	"testing"
+)
 
 func TestGetBinaryFromInt(t *testing.T) {
 	number := 42
@@ -26,4 +29,12 @@ func TestGetOctalHexidecimalFromInt(t *testing.T) {
 	}
 }
 
-
+func TestPrintConsoleAndSaveToBuffer(t *testing.T) {
+	word := "test"
+	want := "Printing without formatting: test"
+	var output bytes.Buffer
+	PrintConsoleAndSaveToBuffer(&output, word);
+	if got := output.String(); got != want {
+		t.Errorf("PrintConsoleAndSaveToBuffer(os.Stdout, test) = %q, want %q", got, want)
+	}
+}

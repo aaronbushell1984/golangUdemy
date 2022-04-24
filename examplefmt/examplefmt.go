@@ -2,10 +2,13 @@ package examplefmt
 
 import (
 	"fmt"
+	"io"
 )
 
-func PrintToConsole(variable interface{}) {
-	fmt.Print("Printing without formatting:", variable)
+// Capture print in io for testing
+// Use Fprint() with no formatting
+func PrintConsoleAndSaveToBuffer(w io.Writer, variable interface{}) {
+	fmt.Fprint(w, "Printing without formatting: ", variable)
 }
 
 func GetBinaryFromInt(number int) string {
