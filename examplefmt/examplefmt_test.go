@@ -38,3 +38,14 @@ func TestPrintConsoleAndSaveToBuffer(t *testing.T) {
 		t.Errorf("PrintConsoleAndSaveToBuffer(os.Stdout, test) = %q, want %q", got, want)
 	}
 }
+
+func TestPrintfConsoleAndSaveToBuffer(t *testing.T) {
+	word := "test"
+	want := `Printing with formatting: 
+	test`
+	var output1 bytes.Buffer
+	PrintfConsoleAndSaveToBuffer(&output1, word);
+	if got := output1.String(); got != want {
+		t.Errorf("PrintfConsoleAndSaveToBuffer(os.Stdout, test) = %q, want %q", got, want)
+	}
+}

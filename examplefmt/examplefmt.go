@@ -6,9 +6,15 @@ import (
 )
 
 // Capture print in io for testing
-// Use Fprint() with no formatting
+// Use Fprint() without formatting
 func PrintConsoleAndSaveToBuffer(w io.Writer, variable interface{}) {
-	fmt.Fprint(w, "Printing without formatting: ", variable)
+	description := "Printing without formatting: "
+	fmt.Fprint(w, description, variable)
+}
+
+func PrintfConsoleAndSaveToBuffer(w io.Writer, variable interface{}) {
+	description := "Printing with formatting: "
+	fmt.Fprintf(w, "%s\n\t%s", description, variable)
 }
 
 func GetBinaryFromInt(number int) string {
