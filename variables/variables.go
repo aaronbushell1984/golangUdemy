@@ -25,8 +25,25 @@ func GetLocalVariables() string {
 	return local
 }
 
-var global = "Available outside function"
+// package scope
+var pckg string = "Available outside function"
 
-func GetGlobalVariables() string {
-	return global
+func GetPackageVariables() string {
+	return pckg
+}
+
+// unassigned variables take zero value by default
+var unassigned_int int
+var unassigned_string string
+
+func GetPackageZeroValueInt() int {
+	return unassigned_int
+}
+
+func GetPackageZeroValueVariables() int {
+	return unassigned_int
+}
+
+func GetPackageZeroValueString() string {
+	return unassigned_string
 }

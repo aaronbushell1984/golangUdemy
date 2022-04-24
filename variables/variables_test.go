@@ -23,9 +23,23 @@ func TestGetLocalVariables(t *testing.T) {
 	}
 }
 
-func TestGetGlobalVariables(t *testing.T) {
+func TestGetPackageVariables(t *testing.T) {
 	want := "Available outside function"
-	if got := GetGlobalVariables(); got != want {
-		t.Errorf("GetGlobalVariables() = %q, want %q", got, want)
+	if got := GetPackageVariables(); got != want {
+		t.Errorf("GetPackageVariables() = %q, want %q", got, want)
+	}
+}
+
+func TestGetPackageZeroValueInt(t *testing.T) {
+	want := 0
+	if got := GetPackageZeroValueInt(); got != want {
+		t.Errorf("GetPackageZeroValueInt() = %q, want %q", got, want)
+	}
+}
+
+func TestGetPackageZeroValueString(t *testing.T) {
+	want := ""
+	if got := GetPackageZeroValueString(); got != want {
+		t.Errorf("GetPackageZeroValueInt() = %q, want %q", got, want)
 	}
 }
