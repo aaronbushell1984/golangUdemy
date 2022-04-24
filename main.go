@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-
 	"github.com/aaronbushell1984/golangUdemy/capturereturns"
 	"github.com/aaronbushell1984/golangUdemy/dependency"
 	"github.com/aaronbushell1984/golangUdemy/exampleimport"
