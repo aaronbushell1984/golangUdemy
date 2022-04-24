@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func TestGetTypeReflectInt(t *testing.T) {
+func TestGetTypeReflectPassingInt(t *testing.T) {
 	number := 42
 	want := "int"
 	if got := GetTypeReflect(number); got != want {
@@ -12,7 +12,7 @@ func TestGetTypeReflectInt(t *testing.T) {
 	}
 }
 
-func TestGetTypeReflectString(t *testing.T) {
+func TestGetTypeReflectPassingString(t *testing.T) {
 	word := "test"
 	want := "string"
 	if got := GetTypeReflect(word); got != want {
@@ -20,7 +20,7 @@ func TestGetTypeReflectString(t *testing.T) {
 	}
 }
 
-func TestGetTypePercentTInt(t *testing.T) {
+func TestGetTypePercentTPassingInt(t *testing.T) {
 	number := 42
 	want := "int"
 	if got := GetTypePercentT(number); got != want {
@@ -28,7 +28,7 @@ func TestGetTypePercentTInt(t *testing.T) {
 	}
 }
 
-func TestGetTypePercentTString(t *testing.T) {
+func TestGetTypePercentTPassingString(t *testing.T) {
 	word := "test"
 	want := "string"
 	if got := GetTypePercentT(word); got != want {
