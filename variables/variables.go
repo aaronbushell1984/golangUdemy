@@ -40,10 +40,6 @@ func GetPackageZeroValueInt() int {
 	return unassigned_int
 }
 
-func GetPackageZeroValueVariables() int {
-	return unassigned_int
-}
-
 func GetPackageZeroValueString() string {
 	return unassigned_string
 }
