@@ -35,18 +35,3 @@ func TestGetTypePercentTString(t *testing.T) {
 		t.Errorf("GetTypePercentT(word) = %q, want %q", got, want)
 	}
 }
-
-func TestGetRawStringWithBackticks(t *testing.T) {
-	want := `When using backticks "quotes" are printed and
-	newlines are interpreted without use of \n`
-	if got := GetRawStringWithBackticks(); got != want {
-		t.Errorf("GetRawStringWithBackticks() = %q, want %q", got, want)
-	}
-}
-
-func TestGetStringLiteralWithQuotes(t *testing.T) {
-	want := "When using quotes, quotation marks can not be printed and \nnewlines are interpreted with use of forward slash and n"
-	if got := GetStringLiteralWithQuotes(); got != want {
-		t.Errorf("GetStringLiteralWithBackticks() = %q, want %q", got, want)
-	}
-}

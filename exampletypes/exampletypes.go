@@ -16,13 +16,3 @@ func GetTypeReflect(variable interface{}) string {
 func GetTypePercentT(variable interface{}) string {
 	return fmt.Sprintf("%T", variable)
 }
-
-func GetRawStringWithBackticks() string {
-	return `When using backticks "quotes" are printed and
-	newlines are interpreted without use of \n`
-}
-
-func GetStringLiteralWithQuotes() string {
-	return "When using quotes, " +
-	"quotation marks can not be printed and \nnewlines are interpreted with use of forward slash and n"
-}
