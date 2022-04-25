@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestPrintDefaultTypeTabularDrive(t *testing.T) {
+func TestPrintDefaultTypeTabularDriven(t *testing.T) {
 	var tests = []struct {
 		a interface{}
 		want string
@@ -20,7 +20,29 @@ func TestPrintDefaultTypeTabularDrive(t *testing.T) {
 	for _, tt :=range tests {
 		testname := fmt.Sprintf("%v", tt.a)
 		t.Run(testname, func(t *testing.T){
-			got := PrintDefaultType(tt.a)
+			got := PrintType(tt.a)
+			if got != tt.want {
+				t.Errorf("got %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func TestPrintByteAndRuneAliasTrueTypesTabularDriven(t *testing.T) {
+	var bytealias byte
+	var runealias rune
+	var tests = []struct {
+		a interface{}
+		want string
+	}{
+		{bytealias, "uint8"},
+		{runealias, "int32"},
+	}
+
+	for _, tt :=range tests {
+		testname := fmt.Sprintf("%v", tt.a)
+		t.Run(testname, func(t *testing.T){
+			got := PrintType(tt.a)
 			if got != tt.want {
 				t.Errorf("got %v, want %v", got, tt.want)
 			}
