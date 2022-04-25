@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/aaronbushell1984/golangUdemy/capturereturns"
-	"github.com/aaronbushell1984/golangUdemy/dependency"
-	"github.com/aaronbushell1984/golangUdemy/exampleimport"
-	"github.com/aaronbushell1984/golangUdemy/module"
-	"github.com/aaronbushell1984/golangUdemy/variadicparameter"
+	"github.com/aaronbushell1984/golangUdemy/4-5/capturereturns"
+	"github.com/aaronbushell1984/golangUdemy/4-5/dependency"
+	"github.com/aaronbushell1984/golangUdemy/4-5/exampleimport"
+	"github.com/aaronbushell1984/golangUdemy/4-5/module"
+	"github.com/aaronbushell1984/golangUdemy/4-5/variadicparameter"
 )
 
 func main() {
