@@ -1,11 +1,14 @@
 package userdefinedtype
 
-// import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
-// type mytype int
+func PrintType(mytype interface{}) string {
+	return fmt.Sprintf("%T", mytype)
+}
 
-// func PrintType(mytype int) string {
-// 	nametext := "My type is called: "
-// 	typetext := " and is of underlying type: "
-// 	return fmt.Sprintf("%s%s%s%s", nametext, mytype, typetext, mytype)
-// }
+func PrintUnderlyingType(mytype interface{}) string {
+	return fmt.Sprintf("%v", reflect.TypeOf(mytype).Kind())
+}
