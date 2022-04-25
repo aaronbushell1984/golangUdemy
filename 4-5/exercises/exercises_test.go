@@ -53,6 +53,6 @@ func TestPrintTypeOfUserDefinedConvertedToUnderlyingTypeInt(t *testing.T) {
 	regularint = int(myint)
 	want := "int"
 	if got := PrintTypeOfUserDefinedType(regularint); got != want {
-		t.Errorf("(PrintTypeOfUserDefinedConvertedToUnderlyingTypeInt(converted) = %q, want %q", got, want)
+		t.Errorf("PrintTypeOfUserDefinedType(regularint) = %q, want %q", got, want)
 	}
 }
