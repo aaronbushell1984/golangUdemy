@@ -1,6 +1,12 @@
 /*
-	Package dependency demonstrates the use of an imported dependency.
-	This happens to be rsc.io/quote where quote.Hello is used to print
-	"Hello World"
+	import "rsc.io/quote"
+
+	Allows use of:
+
+	return quote.Hello()
+
+	Which is used to return:
+
+	Hello, World.
 */
 package dependency
