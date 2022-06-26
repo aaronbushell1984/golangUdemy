@@ -5,10 +5,6 @@
     <option name="openedFilesInfos">
       <list>
         <OpenedFileInfo>
-          <option name="caretOffset" value="615" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/6/stringtypes/stringtypes.go" />
-        </OpenedFileInfo>
-        <OpenedFileInfo>
           <option name="caretOffset" value="1127" />
           <option name="fileUrl" value="file://$PROJECT_DIR$/6/stringtypes/stringtypes_test.go" />
         </OpenedFileInfo>
@@ -21,11 +17,7 @@
           <option name="fileUrl" value="file://$PROJECT_DIR$/4-5/variables/variables.go" />
         </OpenedFileInfo>
         <OpenedFileInfo>
-          <option name="caretOffset" value="0" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/4-5/capturereturns/capturereturns.go" />
-        </OpenedFileInfo>
-        <OpenedFileInfo>
-          <option name="caretOffset" value="94" />
+          <option name="caretOffset" value="690" />
           <option name="fileUrl" value="file://$PROJECT_DIR$/main.go" />
         </OpenedFileInfo>
         <OpenedFileInfo>
@@ -41,8 +33,32 @@
           <option name="fileUrl" value="file://$PROJECT_DIR$/4-5/dependency/dependency.go" />
         </OpenedFileInfo>
         <OpenedFileInfo>
-          <option name="caretOffset" value="316" />
+          <option name="caretOffset" value="319" />
           <option name="fileUrl" value="file://$PROJECT_DIR$/4-5/dependency/dependency_test.go" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="0" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/README.md" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="307" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/4-5/printlnreturns/printlnreturns.go" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="322" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/4-5/printlnreturns/printlnreturns_test.go" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="0" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/4-5/examplefmt/examplefmt.go" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="0" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/4-5/examplefmt/examplefmt_test.go" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="0" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/4-5/exampleimport/exampleimport.go" />
         </OpenedFileInfo>
       </list>
     </option>
