@@ -19,17 +19,16 @@ func TestConvertStringToSliceOfBytesMrunalini(t *testing.T) {
 }
 
 func TestNewlineAndTabRawStringLiteral(t *testing.T) {
-	want := `"Mrunalini is a:
-				string"`
+	want := "This is a:\n\t\t\t\traw string literal with new line and tabs"
 	if got := NewlineAndTabRawStringLiteral(); got != want {
-		t.Errorf("NewlineAndTabRawStringLiteral() = #got, want #{want}")
+		t.Errorf("NewlineAndTabRawStringLiteral() = %q, want %q", got, want)
 	}
 }
 
-//func TestPrintStringCodepoints(t *testing.T) {
-//	name := "Mrunalini"
-//	want := [string(77), string(114), string(117), string(110), string(97), string(108), string(105), string(110), string(105)]
-//	if got := PrintStringCodepoints(name); got != want {
-//		t.Errorf("ConvertStringToSliceOfBytes(name) = %q, want %q", got, want)
-//	}
-//}
+func TestPrintStringCodepoints(t *testing.T) {
+	name := "Mrunalini"
+	want := "U+004D 'M' U+0072 'r' U+0075 'u' U+006E 'n' U+0061 'a' U+006C 'l' U+0069 'i' U+006E 'n' U+0069 'i' "
+	if got := PrintStringCodepoints(name); got != want {
+		t.Errorf("ConvertStringToSliceOfBytes(name) \ngot:\n %q, \nwant:\n %q", got, want)
+	}
+}

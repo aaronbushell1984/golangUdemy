@@ -1,6 +1,9 @@
 package stringtypes
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func PrintStringAndType(name string) string {
 	return name + " is a " + fmt.Sprintf("%T", name)
@@ -12,14 +15,16 @@ func ConvertStringToSliceOfByteString(s string) string {
 }
 
 func NewlineAndTabRawStringLiteral() string {
-	return `"Mrunalini is a:
-				string"`
+	return `This is a:
+				raw string literal with new line and tabs`
 }
 
-//func PrintStringCodepoints(s string) []int {
-//	var codepoints []int
-//	for i := 0; i > len(s); i++ {
-//		codepoints = append(codepoints, s)
-//	}
-//	return codepoints
-//}
+func PrintStringCodepoints(s string) string {
+	var codepoints []string
+	for i := 0; i < len(s); i++ {
+		cp := fmt.Sprintf("%#U ", s[i])
+		codepoints = append(codepoints, cp)
+	}
+	cps := strings.Join(codepoints, "")
+	return cps
+}

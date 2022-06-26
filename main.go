@@ -7,6 +7,7 @@ import (
 	"github.com/aaronbushell1984/golangUdemy/4-5/exampleimport"
 	"github.com/aaronbushell1984/golangUdemy/4-5/module"
 	"github.com/aaronbushell1984/golangUdemy/4-5/variadicparameter"
+	"github.com/aaronbushell1984/golangUdemy/6/stringtypes"
 )
 
 func main() {
@@ -16,4 +17,6 @@ func main() {
 	exampleimport.ExampleImportPrint()
 	variadicparameter.VaridaicParameterPrint()
 	capturereturns.CaptureReturnsPrint()
+	s := "Mrunalini"
+	fmt.Println(stringtypes.PrintStringCodepoints(s))
 }
