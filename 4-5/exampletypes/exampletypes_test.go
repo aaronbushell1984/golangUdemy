@@ -1,6 +1,7 @@
 package exampletypes
 
 import (
+	"fmt"
 	"testing"
 )
 
@@ -20,6 +21,14 @@ func TestGetTypeReflectPassingString(t *testing.T) {
 	}
 }
 
+func ExampleGetTypeReflect() {
+	fmt.Println(GetTypeReflect(42))
+	fmt.Println(GetTypeReflect("test"))
+	// Output:
+	// int
+	// string
+}
+
 func TestGetTypePercentTPassingInt(t *testing.T) {
 	number := 42
 	want := "int"
@@ -34,4 +43,12 @@ func TestGetTypePercentTPassingString(t *testing.T) {
 	if got := GetTypePercentT(word); got != want {
 		t.Errorf("GetTypePercentT(word) = %q, want %q", got, want)
 	}
+}
+
+func ExampleGetTypePercentT() {
+	fmt.Println(GetTypePercentT(42))
+	fmt.Println(GetTypePercentT("test"))
+	// Output:
+	// int
+	// string
 }

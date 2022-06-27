@@ -1,3 +1,4 @@
+// Package exampletypes demonstrates basic type in Go
 package exampletypes
 
 import (
@@ -5,14 +6,20 @@ import (
 	"reflect"
 )
 
-// reflect package contains TypeOf to return type
-// variable interface{} allows any type into function
+// GetTypeReflect uses the reflect standard library to return the type of any given variable.
+// 	reflect.TypeOf(variable)
+// accesses the type of given variable.
+//	 variable interface{}
+// in method signature denotes any type as the variable argument.
 func GetTypeReflect(variable interface{}) string {
 	return reflect.TypeOf(variable).String()
 }
 
-// %T and Printf on fmt package can print type to console
-// %T and Sprintf on fmt package can return type
+// GetTypePercentT returns the type of any given variable.
+// 	fmt.Sprintf(%T, variable)
+//or
+//	fmt.Sprintf(#{variable})
+// returns the type of variable.
 func GetTypePercentT(variable interface{}) string {
 	return fmt.Sprintf("%T", variable)
 }
