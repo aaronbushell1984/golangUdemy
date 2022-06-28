@@ -24,6 +24,14 @@
           <option name="caretOffset" value="879" />
           <option name="fileUrl" value="file://$PROJECT_DIR$/4-5/examplefmt/examplefmt.go" />
         </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="898" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/6/stringtypes/stringtypes.go" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="1595" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/6/stringtypes/stringtypes_test.go" />
+        </OpenedFileInfo>
       </list>
     </option>
   </component>
