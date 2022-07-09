@@ -5,15 +5,15 @@
     <option name="openedFilesInfos">
       <list>
         <OpenedFileInfo>
-          <option name="caretOffset" value="293" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/6/iotas/iotas_test.go" />
-        </OpenedFileInfo>
-        <OpenedFileInfo>
-          <option name="caretOffset" value="247" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/6/iotas/iotas.go" />
+          <option name="caretOffset" value="2810" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/7/excercisetwo/excercisetwo_test.go" />
         </OpenedFileInfo>
         <OpenedFileInfo>
           <option name="caretOffset" value="0" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/6/iotas/iotas.go" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="2330" />
           <option name="fileUrl" value="file://$PROJECT_DIR$/7/excercisetwo/excercisetwo.go" />
         </OpenedFileInfo>
       </list>
