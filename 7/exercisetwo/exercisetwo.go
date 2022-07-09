@@ -1,5 +1,5 @@
-// Package excercisetwo is the second set of excercises from the course
-package excercisetwo
+// Package exercisetwo is the second set of exercises from the course
+package exercisetwo
 
 import "fmt"
 

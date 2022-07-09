@@ -1,9 +1,9 @@
-// Package iotos demonstrates the use of iotas in go
+// Package iotas demonstrates the use of iotas in go
 package iotas
 
 import "fmt"
 
-// ReturnFourIotaConsts returns a string demonstrating iota incrementing of four iotas
+// ReturnFourIotaConsts returns a string demonstrating incrementing four iotas
 func ReturnFourIotaConsts() string {
 	const (
 		a = iota
@@ -14,7 +14,7 @@ func ReturnFourIotaConsts() string {
 	return fmt.Sprintf("%v, %v, %v, %v", a, b, c, d)
 }
 
-// ReturnBits takes kb, mb or gb and returns string with amount of bits as a string
+// ReturnBits takes kb, mb or gb and returns amount of bits as a string
 //
 // Bit shifting in increments of 10 using iota is used to obtain the values:
 //		const (

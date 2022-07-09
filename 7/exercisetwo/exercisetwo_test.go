@@ -1,4 +1,4 @@
-package excercisetwo
+package exercisetwo
 
 import (
 	"fmt"
