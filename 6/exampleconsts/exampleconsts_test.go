@@ -1,10 +1,19 @@
-package exampleconsts_test
+package exampleconsts
 
 import "testing"
 
-func TestReturnTwoPiConsts(t *testing.T) {
-	want := "We have returned 3.1416 and 3.1416"
-	if got := ReturnTwoFloatVariablesOrConstantsAfterUpdatingOne(); got != want {
-		t.Errorf("ReturnTwoFloatVariablesOrConstantsAfterUpdatingOne = %q, want %q", got, want)
+func TestUnlockDoor(t *testing.T) {
+	var door string = doorUnlocked
+	want := "unlocked"
+	if got := UnlockDoor(door); got != want {
+		t.Errorf("UnlockDoor = %q, want %q", got, want)
+	}
+}
+
+func TestLockDoor(t *testing.T) {
+	var door string = doorLocked
+	want := "locked"
+	if got := LockDoor(door); got != want {
+		t.Errorf("LockDoor = %q, want %q", got, want)
 	}
 }
