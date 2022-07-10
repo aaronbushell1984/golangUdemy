@@ -17,12 +17,20 @@
           <option name="fileUrl" value="file://$PROJECT_DIR$/8/loops/loops.go" />
         </OpenedFileInfo>
         <OpenedFileInfo>
+          <option name="caretOffset" value="2297" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/8/loops/loops_test.go" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
           <option name="caretOffset" value="1454" />
           <option name="fileUrl" value="file://$PROJECT_DIR$/7/exercisetwo/exercisetwo.go" />
         </OpenedFileInfo>
         <OpenedFileInfo>
-          <option name="caretOffset" value="2222" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/8/loops/loops_test.go" />
+          <option name="caretOffset" value="453" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/8/conditionals/conditionals.go" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="856" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/8/conditionals/conditionals_test.go" />
         </OpenedFileInfo>
       </list>
     </option>
