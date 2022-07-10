@@ -98,8 +98,8 @@ func ReturnEvenNumbersWithContinue(start int, end int) string {
 // ReturnAsciiNumbersAsCharacters returns ascii character representations of the numbers between supplied range
 func ReturnAsciiNumbersAsCharacters(start int, end int) string {
 	switch {
-	case start < 0:
-		return "There are no negative ascii characters"
+	case start < 33:
+		return "There are no regular ascii characters below 33"
 	case start > end:
 		return "End number must be greater or equal to start number"
 	}

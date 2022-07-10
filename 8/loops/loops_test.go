@@ -72,11 +72,13 @@ func ExampleReturnEvenNumbersWithContinue() {
 }
 
 func ExampleReturnAsciiNumbersAsCharacters() {
-	fmt.Println(ReturnAsciiNumbersAsCharacters(-10, 25))
+	fmt.Println(ReturnAsciiNumbersAsCharacters(123, 125))
 	fmt.Println(ReturnAsciiNumbersAsCharacters(33, 122))
-	fmt.Println(ReturnAsciiNumbersAsCharacters(10, -24))
+	fmt.Println(ReturnAsciiNumbersAsCharacters(-10, 25))
+	fmt.Println(ReturnAsciiNumbersAsCharacters(40, -24))
 	// Output:
-	// There are no negative ascii characters
+	// [{ | }]
 	// [! " # $ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? @ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ ` a b c d e f g h i j k l m n o p q r s t u v w x y z]
+	// There are no regular ascii characters below 33
 	// End number must be greater or equal to start number
 }
