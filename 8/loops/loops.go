@@ -26,3 +26,87 @@ func ReturnAllTwoBitOptions() []string {
 	}
 	return numbers
 }
+
+// ReturnNumbersOneToTen returns the string representing slice of numbers from 1 to 10
+//
+// Demonstrates a single condition loop with:
+//	for i <= 10 {
+//		numbers = append(numbers, i)
+//		i++
+//	}
+func ReturnNumbersOneToTen() string {
+	i := 1
+	var numbers []int
+	for i <= 10 {
+		numbers = append(numbers, i)
+		i++
+	}
+	return fmt.Sprint(numbers)
+}
+
+// ReturnNumbersOneToTenWithBreak returns the string representing slice of numbers from 1 to 10
+//
+// Demonstrates an infinite loop with a break with:
+//	for {
+//		if i > 10 {
+//			break
+//		}
+//		numbers = append(numbers, i)
+//		i++
+//	}
+func ReturnNumbersOneToTenWithBreak() string {
+	i := 1
+	var numbers []int
+	for {
+		if i > 10 {
+			break
+		}
+		numbers = append(numbers, i)
+		i++
+	}
+	return fmt.Sprint(numbers)
+}
+
+// ReturnEvenNumbersWithContinue returns even numbers between two values
+//
+// "continue" is used to skip iterations and odd numbers:
+//	for i := start; i <= end; i++ {
+//		switch {
+//		case i == 0:
+//			continue
+//		case i%2 == 0:
+//			evens = append(evens, i)
+//		}
+//	}
+func ReturnEvenNumbersWithContinue(start int, end int) string {
+	if start > end {
+		return "End number must be greater or equal to start number"
+	}
+
+	var evens []int
+	for i := start; i <= end; i++ {
+		switch {
+		case i == 0:
+			continue
+		case i%2 == 0:
+			evens = append(evens, i)
+		}
+	}
+	return fmt.Sprint(evens)
+}
+
+// ReturnAsciiNumbersAsCharacters returns ascii character representations of the numbers between supplied range
+func ReturnAsciiNumbersAsCharacters(start int, end int) string {
+	switch {
+	case start < 0:
+		return "There are no negative ascii characters"
+	case start > end:
+		return "End number must be greater or equal to start number"
+	}
+
+	var ascii []int
+	for i := start; i <= end; i++ {
+		ascii = append(ascii, i)
+	}
+	return fmt.Sprintf("%c", ascii)
+}
