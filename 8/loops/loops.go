@@ -69,12 +69,12 @@ func ReturnNumbersOneToTenWithBreak() string {
 
 // ReturnEvenNumbersWithContinue returns even numbers between two values
 //
-// "continue" is used to skip iterations and odd numbers:
+// "continue" is used to skip 0:
 //	for i := start; i <= end; i++ {
-//		switch {
-//		case i == 0:
+//		if i == 0 {
 //			continue
-//		case i%2 == 0:
+//		}
+//		if i%2 == 0 {
 //			evens = append(evens, i)
 //		}
 //	}
@@ -82,13 +82,12 @@ func ReturnEvenNumbersWithContinue(start int, end int) string {
 	if start > end {
 		return "End number must be greater or equal to start number"
 	}
-
 	var evens []int
 	for i := start; i <= end; i++ {
-		switch {
-		case i == 0:
+		if i == 0 {
 			continue
-		case i%2 == 0:
+		}
+		if i%2 == 0 {
 			evens = append(evens, i)
 		}
 	}

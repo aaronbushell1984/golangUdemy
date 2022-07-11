@@ -13,24 +13,28 @@
           <option name="fileUrl" value="file://$PROJECT_DIR$/6/iotas/iotas.go" />
         </OpenedFileInfo>
         <OpenedFileInfo>
-          <option name="caretOffset" value="2199" />
+          <option name="caretOffset" value="2155" />
           <option name="fileUrl" value="file://$PROJECT_DIR$/8/loops/loops.go" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="69" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/7/exercisetwo/exercisetwo.go" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="1552" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/8/conditionals/conditionals_test.go" />
         </OpenedFileInfo>
         <OpenedFileInfo>
           <option name="caretOffset" value="2297" />
           <option name="fileUrl" value="file://$PROJECT_DIR$/8/loops/loops_test.go" />
         </OpenedFileInfo>
         <OpenedFileInfo>
-          <option name="caretOffset" value="1454" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/7/exercisetwo/exercisetwo.go" />
+          <option name="caretOffset" value="49848" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/8/exercisethree/exercises_test.go" />
         </OpenedFileInfo>
         <OpenedFileInfo>
-          <option name="caretOffset" value="453" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/8/conditionals/conditionals.go" />
-        </OpenedFileInfo>
-        <OpenedFileInfo>
-          <option name="caretOffset" value="856" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/8/conditionals/conditionals_test.go" />
+          <option name="caretOffset" value="449" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/8/exercisethree/exercises.go" />
         </OpenedFileInfo>
       </list>
     </option>

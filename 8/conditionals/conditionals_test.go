@@ -38,3 +38,17 @@ func BenchmarkReturnSuppliedNameIfOverThreeCharactersInitializationStatement(b *
 		ReturnSuppliedNameIfOverThreeCharactersInitializationStatement("Mru")
 	}
 }
+
+func ExampleFizzBuzzCaseFallthrough() {
+	fmt.Println(FizzBuzzCaseFallthrough(3))
+	fmt.Println(FizzBuzzCaseFallthrough(10))
+	fmt.Println(FizzBuzzCaseFallthrough(15))
+	fmt.Println(FizzBuzzCaseFallthrough(14))
+	fmt.Println(FizzBuzzCaseFallthrough(2))
+	// Output:
+	// Fizz Fallthrough
+	// Buzz
+	// FizzBuzz
+	// Nothing
+	//  Fallthrough
+}
