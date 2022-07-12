@@ -1,5 +1,5 @@
 // Package exercisetwo is the third set of exercises from the course
-package exercises
+package exercisethree
 
 import "fmt"
 
@@ -26,4 +26,16 @@ func ReturnUpperAlphabetRuneCodePointsThreeTimes() string {
 		}
 	}
 	return fmt.Sprintf("%v", result)
+}
+
+// ReturnYearsAlive returns all the years between supplied year and 1984
+func ReturnYearsAlive(year int) string {
+	result := "1984"
+	if year < 1984 {
+		return "Enter a year on or after " + result
+	}
+	for i := 1985; i <= year; i++ {
+		result += fmt.Sprintf(" %v", i)
+	}
+	return result
 }
