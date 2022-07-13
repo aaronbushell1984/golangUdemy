@@ -39,3 +39,30 @@ func ReturnYearsAlive(year int) string {
 	}
 	return result
 }
+
+// ReturnDivideFourRemainder finds the remainder of all numbers between the range when quartered
+func ReturnDivideFourRemainder(start int, end int) []int {
+	var remainders []int
+	switch {
+	case start > end:
+		return remainders
+	}
+	for i := start; i <= end; i++ {
+		k := i%4
+		remainders = append(remainders, k)
+	}
+	return remainders
+}
+
+// GetResponseToFaveSport returns a response based on sport added using a switch statement
+func GetResponseToFaveSport(faveSport string) string {
+	switch faveSport {
+	case "Football":
+		return "World's most popular sport!"
+	case "Tennis":
+		return "Strawberries and cream!"
+	case "Golf":
+		return "Easy tiger!"
+	}
+	return "Not heard of that one!"
+}

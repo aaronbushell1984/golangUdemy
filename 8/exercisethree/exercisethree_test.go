@@ -106,3 +106,29 @@ func ExampleReturnYearsAlive() {
 	// 1984 1985 1986 1987 1988
 	// Enter a year on or after 1984
 }
+
+func ExampleReturnDivideFourRemainder() {
+	fmt.Println(ReturnDivideFourRemainder(10, 100))
+	fmt.Println(ReturnDivideFourRemainder(100, 99))
+	fmt.Println(ReturnDivideFourRemainder(0, 4))
+	fmt.Println(ReturnDivideFourRemainder(4, 4))
+	// Output:
+	// [2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0]
+	// []
+	// [0 1 2 3 0]
+	// [0]
+}
+
+func ExampleGetResponseToFaveSport() {
+	fmt.Println(GetResponseToFaveSport("Football"))
+	fmt.Println(GetResponseToFaveSport("Tennis"))
+	fmt.Println(GetResponseToFaveSport("Golf"))
+	fmt.Println(GetResponseToFaveSport("Bobsleigh"))
+	fmt.Println(GetResponseToFaveSport(""))
+	// Output:
+	// World's most popular sport!
+	// Strawberries and cream!
+	// Easy tiger!
+	// Not heard of that one!
+	// Not heard of that one!
+}
