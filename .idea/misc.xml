@@ -5,16 +5,24 @@
     <option name="openedFilesInfos">
       <list>
         <OpenedFileInfo>
-          <option name="caretOffset" value="979" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/8/exercisethree/exercisethree.go" />
-        </OpenedFileInfo>
-        <OpenedFileInfo>
           <option name="caretOffset" value="2155" />
           <option name="fileUrl" value="file://$PROJECT_DIR$/8/loops/loops.go" />
         </OpenedFileInfo>
         <OpenedFileInfo>
           <option name="caretOffset" value="0" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/8/exercisethree/exercisethree_test.go" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/10/arrays/arrays_test.go" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="965" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/10/arrays/arrays.go" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="124" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/10/slices/slices.go" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="215" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/10/slices/slices_test.go" />
         </OpenedFileInfo>
       </list>
     </option>

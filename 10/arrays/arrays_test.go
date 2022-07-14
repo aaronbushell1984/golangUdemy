@@ -23,7 +23,11 @@ func ExampleCreateArrayOfSizeAndReassignOneValue() {
 }
 
 func ExampleGetLengthArray() {
-	fmt.Println(GetLengthArray(0 0 0 0))
-	// Output: 4
+	var array4 [4]int
+	array3 := [3]int{1, 2, 3}
+	fmt.Println(GetLengthArray(array4[:]))
+	fmt.Println(GetLengthArray(array3[:]))
+	// Output:
+	// 4
+	// 3
 }
-

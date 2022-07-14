@@ -5,7 +5,7 @@ import "fmt"
 
 // CreateEmptyArrayOfSize creates an array of given size with default values of 0
 func CreateEmptyArrayOfSize(size int) string {
-	emptyArray := make([]int,size)
+	emptyArray := make([]int, size)
 	return fmt.Sprintf("%v\n", emptyArray)
 }
 
@@ -19,8 +19,14 @@ func CreateArrayOfSizeAndReassignOneValue(size int, position int, value int) str
 	case position > size-1:
 		return fmt.Sprintf("There is no position %v in an array which is %v big", position, size)
 	}
-	emptyArray := make([]int,size)
+	emptyArray := make([]int, size)
 	emptyArray[position] = value
 	return fmt.Sprintf("%v", emptyArray)
 }
 
+// GetLengthArray accepts an array and returns its length
+//
+// As shown in the example, a slice needs to be added to allow this to be passed into this function
+func GetLengthArray(intArray []int) int {
+	return len(intArray)
+}
