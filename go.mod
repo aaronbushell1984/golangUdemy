@@ -1,6 +1,6 @@
 module github.com/aaronbushell1984/golangUdemy
 
-go 1.17
+go 1.18
 
 require rsc.io/quote v1.5.2
 
