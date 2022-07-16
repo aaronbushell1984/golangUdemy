@@ -94,6 +94,13 @@ func BenchmarkGetAppendedMadeSlice(b *testing.B) {
 	GetAppendedSlice(madeSlice, 6, 9, 9, 1000)
 }
 
+func ExampleGetAppendedSlice() {
+	madeSlice := make([]int, 4, 4)
+	fmt.Println(GetAppendedSlice(madeSlice, 6, 9, 9, 1000))
+	// Output:
+	// [0 0 0 0 6 9 9 1000]
+}
+
 func ExampleGetCombinedMultiDimensionalSlices() {
 	person1 := []string{"Mrunalini", "Bushell"}
 	person2 := []string{"Ethan", "Bushell"}
