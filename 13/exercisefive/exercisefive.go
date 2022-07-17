@@ -163,3 +163,21 @@ func makeSedan(drs int, clr string, lux bool) sedan {
 		lux,
 	}
 }
+
+// makeAnonymousSportsCar constructs a car with a new field anonymously, for example:
+//	ferrari := makeAnonymousSportsCar(4, "red", false)
+// Its fields can not be accessed outside the function like:
+// 	ferrari.doors
+func makeAnonymousSportsCar(drs int, clr string, nos bool) any {
+	any := struct {
+		vehicle
+		nitrox bool
+	}{
+		vehicle{
+			drs,
+			clr,
+		},
+		nos,
+	}
+	return any
+}

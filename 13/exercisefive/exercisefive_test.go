@@ -55,3 +55,12 @@ func ExampleMakeSedan() {
 	// The cruiser sedan is luxury: true
 	// The cruiser sedan has 4 doors
 }
+
+func ExampleMakeAnonymousSportsCar() {
+	ferrari := makeAnonymousSportsCar(4, "red", false)
+	fmt.Println(ferrari)
+	fmt.Printf("%T\n", ferrari)
+	// Output:
+	// {{4 red} false}
+	// struct { exercisefive.vehicle; nitrox bool }
+}
