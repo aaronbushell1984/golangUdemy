@@ -13,16 +13,32 @@
           <option name="fileUrl" value="file://$PROJECT_DIR$/10/slices/slices.go" />
         </OpenedFileInfo>
         <OpenedFileInfo>
-          <option name="caretOffset" value="2588" />
+          <option name="caretOffset" value="0" />
           <option name="fileUrl" value="file://$PROJECT_DIR$/11/exercisefour/exercisefour.go" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="2380" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/12/structs/structs.go" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="0" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/12/structs/structs_test.go" />
         </OpenedFileInfo>
         <OpenedFileInfo>
           <option name="caretOffset" value="759" />
           <option name="fileUrl" value="file://$PROJECT_DIR$/10/slices/slices_test.go" />
         </OpenedFileInfo>
         <OpenedFileInfo>
-          <option name="caretOffset" value="4941" />
+          <option name="caretOffset" value="0" />
           <option name="fileUrl" value="file://$PROJECT_DIR$/11/exercisefour/exercisefour_test.go" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="2840" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/13/exercisefive/exercisefive.go" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="719" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/13/exercisefive/exercisefive_test.go" />
         </OpenedFileInfo>
       </list>
     </option>

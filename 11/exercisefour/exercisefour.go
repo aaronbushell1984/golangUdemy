@@ -1,5 +1,4 @@
 // Package exercisefour is the fourth set of exercises from the course
-
 package exercisefour
 
 import "fmt"
