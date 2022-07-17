@@ -7,6 +7,21 @@ type person struct {
 	favouriteIceCreams []string
 }
 
+type vehicle struct {
+	doors  int
+	colour string
+}
+
+type truck struct {
+	vehicle
+	fourWheelDrive bool
+}
+
+type sedan struct {
+	vehicle
+	luxury bool
+}
+
 // GetFavouriteIceCreams combines and returns the favourite ice creams of two people
 //
 // Person is declared as a struct with a slice of ice creams:
@@ -125,4 +140,26 @@ func GetFavouriteIceCreamsFromMap(people map[string]person) []string {
 		}
 	}
 	return iceCreams
+}
+
+// makeTruck constructs a new truck which is an outer type of vehicle
+func makeTruck(drs int, clr string, fWDve bool) truck {
+	return truck{
+		vehicle{
+			drs,
+			clr,
+		},
+		fWDve,
+	}
+}
+
+// makeSedan constructs a new sedan which is an outer type of vehicle
+func makeSedan(drs int, clr string, lux bool) sedan {
+	return sedan{
+		vehicle{
+			drs,
+			clr,
+		},
+		lux,
+	}
 }

@@ -9,35 +9,27 @@
           <option name="fileUrl" value="file://$PROJECT_DIR$/10/arrays/arrays_test.go" />
         </OpenedFileInfo>
         <OpenedFileInfo>
-          <option name="caretOffset" value="3767" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/10/slices/slices.go" />
-        </OpenedFileInfo>
-        <OpenedFileInfo>
           <option name="caretOffset" value="0" />
           <option name="fileUrl" value="file://$PROJECT_DIR$/11/exercisefour/exercisefour.go" />
-        </OpenedFileInfo>
-        <OpenedFileInfo>
-          <option name="caretOffset" value="2380" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/12/structs/structs.go" />
-        </OpenedFileInfo>
-        <OpenedFileInfo>
-          <option name="caretOffset" value="0" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/12/structs/structs_test.go" />
-        </OpenedFileInfo>
-        <OpenedFileInfo>
-          <option name="caretOffset" value="759" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/10/slices/slices_test.go" />
         </OpenedFileInfo>
         <OpenedFileInfo>
           <option name="caretOffset" value="0" />
           <option name="fileUrl" value="file://$PROJECT_DIR$/11/exercisefour/exercisefour_test.go" />
         </OpenedFileInfo>
         <OpenedFileInfo>
-          <option name="caretOffset" value="2840" />
+          <option name="caretOffset" value="0" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/12/structs/structs_test.go" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="1319" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/12/structs/structs.go" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="3679" />
           <option name="fileUrl" value="file://$PROJECT_DIR$/13/exercisefive/exercisefive.go" />
         </OpenedFileInfo>
         <OpenedFileInfo>
-          <option name="caretOffset" value="719" />
+          <option name="caretOffset" value="923" />
           <option name="fileUrl" value="file://$PROJECT_DIR$/13/exercisefive/exercisefive_test.go" />
         </OpenedFileInfo>
       </list>

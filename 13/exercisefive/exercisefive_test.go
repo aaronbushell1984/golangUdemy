@@ -1,6 +1,8 @@
 package exercisefive
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func ExampleGetFavouriteIceCreams() {
 	fmt.Println(GetFavouriteIceCreams())
@@ -26,4 +28,30 @@ func ExampleGetFavouriteIceCreamsFromMap() {
 	fmt.Println(GetFavouriteIceCreamsFromMap(people))
 	// Output:
 	// [Strawberry Vanilla Chocolate Lemon]
+}
+
+func ExampleMakeTruck() {
+	monster := makeTruck(2, "red", true)
+	fmt.Println(monster)
+	fmt.Printf("%T\n", monster)
+	fmt.Printf("The monster truck has 4WD: %v\n", monster.fourWheelDrive)
+	fmt.Printf("The monster truck has %v doors\n", monster.doors)
+	// Output:
+	// {{2 red} true}
+	// exercisefive.truck
+	// The monster truck has 4WD: true
+	// The monster truck has 2 doors
+}
+
+func ExampleMakeSedan() {
+	cruiser := makeSedan(4, "black", true)
+	fmt.Println(cruiser)
+	fmt.Printf("%T\n", cruiser)
+	fmt.Printf("The cruiser sedan is luxury: %v\n", cruiser.luxury)
+	fmt.Printf("The cruiser sedan has %v doors\n", cruiser.doors)
+	// Output:
+	// {{4 black} true}
+	// exercisefive.sedan
+	// The cruiser sedan is luxury: true
+	// The cruiser sedan has 4 doors
 }

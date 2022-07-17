@@ -67,6 +67,7 @@ func GetSalmonFoodType() string {
 //	salmon.colour
 // or:
 //	salmon.food.colour
+// N.B salmon.colour would not work because of name collision setup for GetFieldWhenCollision()
 func GetSalmonFoodColour() string {
 	salmon := meat{
 		food: food{
@@ -74,7 +75,7 @@ func GetSalmonFoodColour() string {
 		},
 		fish: true,
 	}
-	return fmt.Sprint(salmon.colour)
+	return fmt.Sprint(salmon.food.colour)
 }
 
 // GetFieldWhenCollision shows a name collision which should usually be avoided
