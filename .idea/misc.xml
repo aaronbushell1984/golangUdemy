@@ -5,36 +5,32 @@
     <option name="openedFilesInfos">
       <list>
         <OpenedFileInfo>
-          <option name="caretOffset" value="208" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/14/variadicparameter/variadicparameter.go" />
-        </OpenedFileInfo>
-        <OpenedFileInfo>
-          <option name="caretOffset" value="484" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/14/variadicparameter/variadicparameter_test.go" />
+          <option name="caretOffset" value="3767" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/10/slices/slices.go" />
         </OpenedFileInfo>
         <OpenedFileInfo>
           <option name="caretOffset" value="759" />
           <option name="fileUrl" value="file://$PROJECT_DIR$/10/slices/slices_test.go" />
         </OpenedFileInfo>
         <OpenedFileInfo>
-          <option name="caretOffset" value="3767" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/10/slices/slices.go" />
+          <option name="caretOffset" value="443" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/14/methods/methods.go" />
         </OpenedFileInfo>
         <OpenedFileInfo>
-          <option name="caretOffset" value="289" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/14/spread/spread_test.go" />
+          <option name="caretOffset" value="0" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/12/structs/structs.go" />
         </OpenedFileInfo>
         <OpenedFileInfo>
-          <option name="caretOffset" value="470" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/14/spread/spread.go" />
+          <option name="caretOffset" value="0" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/13/exercisefive/exercisefive.go" />
         </OpenedFileInfo>
         <OpenedFileInfo>
-          <option name="caretOffset" value="343" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/14/deferexample/deferexample_test.go" />
+          <option name="caretOffset" value="0" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/13/exercisefive/exercisefive_test.go" />
         </OpenedFileInfo>
         <OpenedFileInfo>
-          <option name="caretOffset" value="222" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/14/deferexample/deferexample.go" />
+          <option name="caretOffset" value="270" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/14/methods/methods_test.go" />
         </OpenedFileInfo>
       </list>
     </option>
