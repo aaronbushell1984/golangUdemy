@@ -5,32 +5,20 @@
     <option name="openedFilesInfos">
       <list>
         <OpenedFileInfo>
-          <option name="caretOffset" value="3767" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/10/slices/slices.go" />
-        </OpenedFileInfo>
-        <OpenedFileInfo>
-          <option name="caretOffset" value="759" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/10/slices/slices_test.go" />
-        </OpenedFileInfo>
-        <OpenedFileInfo>
-          <option name="caretOffset" value="443" />
+          <option name="caretOffset" value="275" />
           <option name="fileUrl" value="file://$PROJECT_DIR$/14/methods/methods.go" />
         </OpenedFileInfo>
         <OpenedFileInfo>
-          <option name="caretOffset" value="0" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/12/structs/structs.go" />
+          <option name="caretOffset" value="398" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/14/interfaces/interfaces_test.go" />
         </OpenedFileInfo>
         <OpenedFileInfo>
-          <option name="caretOffset" value="0" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/13/exercisefive/exercisefive.go" />
-        </OpenedFileInfo>
-        <OpenedFileInfo>
-          <option name="caretOffset" value="0" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/13/exercisefive/exercisefive_test.go" />
-        </OpenedFileInfo>
-        <OpenedFileInfo>
-          <option name="caretOffset" value="270" />
+          <option name="caretOffset" value="165" />
           <option name="fileUrl" value="file://$PROJECT_DIR$/14/methods/methods_test.go" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="490" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/14/interfaces/interfaces.go" />
         </OpenedFileInfo>
       </list>
     </option>

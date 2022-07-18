@@ -1,4 +1,4 @@
-package methods
+package interfaces
 
 import "fmt"
 
@@ -15,4 +15,11 @@ func ExampleSpoil() {
 	fmt.Println(banana)
 	// Output:
 	// {banana yellow true}
+}
+
+func ExamplePersishSpoil() {
+	apple := MakeFood("apple", "red", true)
+	apple = perishable.Spoil(apple)
+	fmt.Println(apple)
+	// {apple red true}
 }

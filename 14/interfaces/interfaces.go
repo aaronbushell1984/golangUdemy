@@ -1,10 +1,14 @@
-// Package methods demonstrates methods in go
-package methods
+// Package interfaces demonstrates the use of interfaces in gp
+package interfaces
 
 type food struct {
 	name    string
 	colour  string
 	spoiled bool
+}
+
+type perishable interface {
+	Spoil() food
 }
 
 // MakeFood contructs a variable of type food
