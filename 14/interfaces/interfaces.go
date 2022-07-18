@@ -7,6 +7,7 @@ type food struct {
 	spoiled bool
 }
 
+// perishible represents behaviour to spoil food
 type perishable interface {
 	Spoil() food
 }

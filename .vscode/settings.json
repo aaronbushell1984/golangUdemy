@@ -1,5 +1,8 @@
 {
     "yaml.schemas": {
         "https://json.schemastore.org/golangci-lint.json": "file:///workspace/golangUdemy/.gitpod.yml"
-    }
+        
+    },
+    "terminal.integrated.letterSpacing": 2
+    
 }

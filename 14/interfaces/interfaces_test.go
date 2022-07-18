@@ -17,7 +17,7 @@ func ExampleSpoil() {
 	// {banana yellow true}
 }
 
-func ExamplePersishSpoil() {
+func ExamplePersishableSpoil() {
 	apple := MakeFood("apple", "red", true)
 	apple = perishable.Spoil(apple)
 	fmt.Println(apple)
