@@ -5,19 +5,19 @@
     <option name="openedFilesInfos">
       <list>
         <OpenedFileInfo>
-          <option name="caretOffset" value="275" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/14/methods/methods.go" />
+          <option name="caretOffset" value="56" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/14/polymorphism/polymorphism.go" />
         </OpenedFileInfo>
         <OpenedFileInfo>
-          <option name="caretOffset" value="101" />
+          <option name="caretOffset" value="22" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/14/polymorphism/polymorphism_test.go" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="243" />
           <option name="fileUrl" value="file://$PROJECT_DIR$/14/interfaces/interfaces.go" />
         </OpenedFileInfo>
         <OpenedFileInfo>
-          <option name="caretOffset" value="165" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/14/methods/methods_test.go" />
-        </OpenedFileInfo>
-        <OpenedFileInfo>
-          <option name="caretOffset" value="326" />
+          <option name="caretOffset" value="0" />
           <option name="fileUrl" value="file://$PROJECT_DIR$/14/interfaces/interfaces_test.go" />
         </OpenedFileInfo>
       </list>

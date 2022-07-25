@@ -7,12 +7,12 @@ type food struct {
 	spoiled bool
 }
 
-// perishible represents behaviour to spoil food
+// perishable represents behaviour to spoil food
 type perishable interface {
 	Spoil() food
 }
 
-// MakeFood contructs a variable of type food
+// MakeFood constructs a variable of type food
 func MakeFood(nme string, clr string, spld bool) food {
 	return food{
 		nme,
