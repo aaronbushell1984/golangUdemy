@@ -40,24 +40,24 @@ type flower struct {
 
 // perishable represents behaviour to spoil
 type perishable interface {
-	Spoil() food
+	Spoil() (food, flower)
 }
 
 // MakeFood constructs a variable of type food
 func MakeFood(nme string, clr string, spld bool) food {
 	return food{
-		nme,
-		clr,
-		spld,
+		name:    nme,
+		colour:  clr,
+		spoiled: spld,
 	}
 }
 
 // MakeFlower constructs a variable of type flower
 func MakeFlower(nme string, clr string, spld bool) flower {
 	return flower{
-		nme,
-		clr,
-		spld,
+		name:    nme,
+		colour:  clr,
+		spoiled: spld,
 	}
 }
 
