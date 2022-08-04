@@ -11,6 +11,8 @@ package returnfunc
 //	theFunc := GetIntViaFunc()
 // Allows the result to be captured from the function call:
 //	answer := theFunc()
+// The function expression can also be exectuted as per the example:
+//	fmt.Println(theFunc())
 func GetIntViaFunc() func() int {
 	return func() int {
 		return 42

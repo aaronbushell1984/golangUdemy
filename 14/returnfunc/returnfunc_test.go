@@ -4,8 +4,7 @@ import "fmt"
 
 func ExampleGetIntViaFunc() {
 	theFunc := GetIntViaFunc()
-	answer := theFunc()
-	fmt.Println(answer)
+	fmt.Println(theFunc())
 	// Output:
 	// 42
 }
