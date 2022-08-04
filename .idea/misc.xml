@@ -5,20 +5,20 @@
     <option name="openedFilesInfos">
       <list>
         <OpenedFileInfo>
-          <option name="caretOffset" value="56" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/14/polymorphism/polymorphism.go" />
+          <option name="caretOffset" value="3767" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/10/slices/slices.go" />
         </OpenedFileInfo>
         <OpenedFileInfo>
-          <option name="caretOffset" value="22" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/14/polymorphism/polymorphism_test.go" />
-        </OpenedFileInfo>
-        <OpenedFileInfo>
-          <option name="caretOffset" value="243" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/14/interfaces/interfaces.go" />
+          <option name="caretOffset" value="759" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/10/slices/slices_test.go" />
         </OpenedFileInfo>
         <OpenedFileInfo>
           <option name="caretOffset" value="0" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/14/interfaces/interfaces_test.go" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/12/structs/structs.go" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="0" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/12/structs/structs_test.go" />
         </OpenedFileInfo>
       </list>
     </option>
