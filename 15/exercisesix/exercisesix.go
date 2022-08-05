@@ -1,7 +1,10 @@
 // Package exercisesix is the sixth set of exercises from the course
 package exercisesix
 
-import "math"
+import (
+	"fmt"
+	"math"
+)
 
 type person struct {
 	first string
@@ -113,3 +116,64 @@ func (sq square) area() float64 {
 func GetArea(s shape) float64 {
 	return s.area()
 }
+
+// GetStringAnonymousFunc demonstrates an anonymous function:
+//	func() {
+//		anonymousResult = "I was created by anonymous function"
+//	}() 
+func GetStringAnonymousFunc() string {
+	var anonymousResult string
+	func() {
+		 anonymousResult = "I was created by anonymous function"
+	}() 
+	return anonymousResult
+}
+
+// AssignFuncToVariable returns a string and is assigned to a variable in example
+func AssignFuncToVariable() string {
+	return "I was assigned to a variable and then called"
+}
+
+// ReturnFunc returns a function which returns a string:
+// 	func ReturnFunc() func() string {
+// 		return func() string {
+// 			return "I was returned from one function, assigned to a variable and then called"
+// 		}
+// 	}
+//
+// The function is assigned to a variable and called in the example
+func ReturnFunc() func() string {
+	return func() string {
+		return "I was returned from one function, assigned to a variable and then called"
+	}
+}
+
+// UsedInCallback returns a function which returns a string can change the tense of the statement
+//
+// The function is used in the example to show it will be used in a callback
+func UsedInCallback(tense string) func() string {
+	return func() string {
+		return fmt.Sprintf("I %v used in a callback", tense)
+	}
+}
+
+// CallbackExample taked in a callback and allows the function to be modified as per example
+func CallbackExample(callback func() string) string {
+	return callback()
+}
+
+// Interate returns a function which counts a local variable which is closed inside the function:
+//	i := 0
+//	return func() int {
+//		i++
+//		return i
+//	}
+// Each function expression can now keep a seperate count as per example
+func Iterate() func() int {
+	i := 0
+	return func() int {
+		i++
+		return i
+	}
+}
+

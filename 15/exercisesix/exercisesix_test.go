@@ -62,6 +62,57 @@ func ExampleGetArea() {
 	// 16
 }
 
+func ExampleGetStringAnonymousFunc() {
+	fmt.Println(GetStringAnonymousFunc())
+	// Output:
+	// I was created by anonymous function
+}
+
+func ExampleAssignFuncToVariable() {
+	assigned :=  AssignFuncToVariable()
+	fmt.Println(assigned)
+	// Output:
+	// I was assigned to a variable and then called
+}
+
+func ExampleReturnFunc() {
+	returned := ReturnFunc()
+	fmt.Println(returned())
+	// Output:
+	// I was returned from one function, assigned to a variable and then called
+}
+
+func ExampleUsedInCallback() {
+	fmt.Println(UsedInCallback("will be")())
+	// Output:
+	// I will be used in a callback
+}
+
+
+func ExampleCallbackExample() {
+	fmt.Println(CallbackExample(UsedInCallback("was")))
+	// Output:
+	// I was used in a callback
+}
+
+func ExampleIterate() {
+	first := Iterate()
+	second := Iterate()
+	fmt.Println(first())
+	fmt.Println(first())
+	fmt.Println(first())
+	fmt.Println(second())
+	// Output:
+	// 1
+	// 2
+	// 3
+	// 1
+}
+
+
+
+
+
 
 
 
