@@ -17,3 +17,42 @@ func ExampleAssignToAddress() {
 	// string
 	// string
 }
+
+func ExampleGetDereference() {
+	apple := "apple"
+	var addressApple *string = &apple
+	fmt.Println(GetDereference(addressApple))
+	// Output:
+	// apple
+}
+
+func ExampleChangeValueViaNewIdentifier() {
+	oldIdentifier := "old"
+	fmt.Println(oldIdentifier)
+	fmt.Println(ChangeValueViaNewIdentifier(oldIdentifier))
+	// Output:
+	// old
+	// new
+}
+
+func ExampleGetChanged() {
+	Same := "Same"
+	fmt.Println(Same)
+	fmt.Println(GetChanged(Same))
+	fmt.Println(Same)
+	// Output:
+	// Same
+	// Changed
+	// Same
+}
+
+func ExampleGetPointerChanged() {
+	Same := "Same"
+	fmt.Println(Same)
+	fmt.Println(GetPointerChanged(&Same))
+	fmt.Println(Same)
+	// Output:
+	// Same
+	// Changed
+	// Changed
+}
