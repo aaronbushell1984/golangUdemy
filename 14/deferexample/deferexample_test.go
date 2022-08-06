@@ -4,28 +4,14 @@ import (
 	"fmt"
 )
 
-func ExampleAddFirst() {
-	AddFirst()
-	fmt.Println(result)
+func ExampleGetFirstSecond() {
+	fmt.Println(GetFirstSecond())
 	// Output:
-	// [first]
+	// [first second]
 }
 
-func ExampleAddSecond() {
-	AddSecond()
-	fmt.Println(result)
+func ExampleGetSecondFirst() {
+	fmt.Println(GetSecondFirst())
 	// Output:
 	// [second]
-}
-
-func ExampleAppendStrings() {
-	fmt.Println(AppendStrings())
-	// Output:
-	// [first then second]
-}
-
-func ExampleDeferAppendStrings() {
-	fmt.Println(DeferAppendStrings())
-	// Output:
-	// [then second]
 }

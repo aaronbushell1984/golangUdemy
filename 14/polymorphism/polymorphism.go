@@ -39,8 +39,12 @@ type flower struct {
 }
 
 // perishable represents behaviour to spoil
+//
+// Only one type can be placed in return:
+//	Spoil() food
+// Therefore flower, even though it contains the spoil method is not perishable
 type perishable interface {
-	Spoil() (food, flower)
+	Spoil() food
 }
 
 // MakeFood constructs a variable of type food
@@ -78,7 +82,6 @@ func (f flower) Spoil() flower {
 }
 
 // TestIsFood checks if the passed in variable is of type food using a type assertion:
-//
 //	t, ok := i.(T)
 func TestIsFood(underTest interface{}) bool {
 	_, ok := underTest.(food)
@@ -86,8 +89,12 @@ func TestIsFood(underTest interface{}) bool {
 }
 
 // TestIsPerishable checks if the passed in variable is of type perishable using a type assertion:
-//
 //	t, ok := i.(T)
+// NB. flower is NOT perishable because OR is not allowed in return type of interface:
+//	type perishable interface {
+//		Spoil() food
+//	}
+
 func TestIsPerishable(underTest interface{}) bool {
 	_, ok := underTest.(perishable)
 	return ok

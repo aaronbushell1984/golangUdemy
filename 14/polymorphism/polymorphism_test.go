@@ -50,6 +50,6 @@ func ExampleTestIsPerishable() {
 	fmt.Println(TestIsPerishable(ten))
 	// Output:
 	// true
-	// true
+	// false
 	// false
 }
