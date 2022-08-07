@@ -30,7 +30,7 @@ func ExampleGetFavouriteIceCreamsFromMap() {
 	// [Strawberry Vanilla Chocolate Lemon]
 }
 
-func ExampleTruck_MakeTruck() {
+func ExamplemakeTruck() {
 	monster := makeTruck(2, "red", true)
 	fmt.Println(monster)
 	fmt.Printf("%T\n", monster)
@@ -43,7 +43,7 @@ func ExampleTruck_MakeTruck() {
 	// The monster truck has 2 doors
 }
 
-func ExampleMakeSedan() {
+func ExamplemakeSedan() {
 	cruiser := makeSedan(4, "black", true)
 	fmt.Println(cruiser)
 	fmt.Printf("%T\n", cruiser)
@@ -56,7 +56,7 @@ func ExampleMakeSedan() {
 	// The cruiser sedan has 4 doors
 }
 
-func ExampleMakeAnonymousSportsCar() {
+func ExamplemakeAnonymousSportsCar() {
 	ferrari := makeAnonymousSportsCar(4, "red", false)
 	fmt.Println(ferrari)
 	fmt.Printf("%T\n", ferrari)
