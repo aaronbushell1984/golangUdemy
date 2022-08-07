@@ -93,17 +93,10 @@ func ExampleGetStatus() {
 	// running
 }
 
-func ExampleUpdateStatus() {
-	completed := "completed"
-	UpdateStatus(&status, completed)
+func ExampleSetStatus() {
+	SetStatus(&status, "completed")
 	fmt.Println(GetStatus(&status))
-	// completed
-}
-
-func ExampleUpdateStatusWithDone() {
-	completed := "completed"
-	UpdateStatusWithDone(&status, completed)
-	fmt.Println(GetStatus(&status))
+	// Output:
 	// completed
 }
 
@@ -115,6 +108,8 @@ func ExampleWaitForStatusUpdate() {
 }
 
 func ExampleDoNotWaitForStatusUpdate() {
+	running := "running"
+	SetStatus(&status, running)
 	DoNotWaitForStatusUpdate()
 	fmt.Println(GetStatus(&status))
 	// Output:

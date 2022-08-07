@@ -30,7 +30,7 @@ func ExampleGetFavouriteIceCreamsFromMap() {
 	// [Strawberry Vanilla Chocolate Lemon]
 }
 
-func ExampleMakeTruck() {
+func ExampleTruck_MakeTruck() {
 	monster := makeTruck(2, "red", true)
 	fmt.Println(monster)
 	fmt.Printf("%T\n", monster)

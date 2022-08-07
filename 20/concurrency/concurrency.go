@@ -84,24 +84,15 @@ func GetStatus(status *string) string {
 }
 
 // UpdateStatus updates the status with the provided new status
-func UpdateStatus(status *string, newStatus string) {
+func SetStatus(status *string, newStatus string) {
 	*status = newStatus
-}
-
-// UpdateStatusWithDone updates the status with the provided new status
-//
-// Completes a worker with:
-//	wgc.Done()
-func UpdateStatusWithDone(status *string, newStatus string) {
-	*status = newStatus
-	wgc.Done()
 }
 
 // DoNotWaitForStatusUpdate runs a go routine to UpdateStatus:
 //	go UpdateStatus(&status, "completed")
 // This does not update the status as the function completes before routine does 
 func DoNotWaitForStatusUpdate() {
-	go UpdateStatus(&status, "completed")
+	go SetStatus(&status, "completed")
 }
 
 // WaitForStatusUpdate runs a go routine to UpdateStatusWithDone() - Compare with DoNotWaitForStatusUpdate()
@@ -110,13 +101,15 @@ func DoNotWaitForStatusUpdate() {
 //	wgc.Add(1)
 // UpdateStatusWithDone is called as go routine:
 //	go UpdateStatusWithDone(&status, "completed")
-// UpdateStatusWithDone contains a completion of waitgroup:
-//	*status = newStatus
+// When done the wait group is reduced with:
 //	wgc.Done()
 // Wait is called to hold completion of function until go routine completes:
 //	wgc.Wait()
 func WaitForStatusUpdate() {
 	wgc.Add(1)
-	go UpdateStatusWithDone(&status, "completed")
+	go func() {
+		SetStatus(&status, "completed")
+		wgc.Done()
+	}()
 	wgc.Wait()
 }
