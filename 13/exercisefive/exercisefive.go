@@ -69,12 +69,8 @@ func GetFavouriteIceCreams() []string {
 		},
 	}
 	var returnIceCreams []string
-	for _, v := range ethan.favouriteIceCreams {
-		returnIceCreams = append(returnIceCreams, v)
-	}
-	for _, v := range mona.favouriteIceCreams {
-		returnIceCreams = append(returnIceCreams, v)
-	}
+	returnIceCreams = append(returnIceCreams, ethan.favouriteIceCreams...)
+	returnIceCreams = append(returnIceCreams, mona.favouriteIceCreams...)
 	return returnIceCreams
 }
 
@@ -135,9 +131,7 @@ func GetAllMapPeopleInSlice(people map[string]person) any {
 func GetFavouriteIceCreamsFromMap(people map[string]person) []string {
 	var iceCreams []string
 	for _, pers := range people {
-		for _, iceCream := range pers.favouriteIceCreams {
-			iceCreams = append(iceCreams, iceCream)
-		}
+		iceCreams = append(iceCreams, pers.favouriteIceCreams...)
 	}
 	return iceCreams
 }
