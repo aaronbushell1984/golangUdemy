@@ -47,10 +47,8 @@ type sedan struct {
 //			"Lemon",
 //		},
 //	}
-// Ranging over each person in turn appends their flavours to return list:
-// 	for _, v := range mona.favouriteIceCreams {
-//		returnIceCreams = append(returnIceCreams, v)
-//	}
+// Appending to ice cream slice each persons favourites which are spread with ...:
+//	returnIceCreams = append(returnIceCreams, mona.favouriteIceCreams...)
 func GetFavouriteIceCreams() []string {
 	ethan := person{
 		firstName: "Ethan",
@@ -120,12 +118,10 @@ func GetAllMapPeopleInSlice(people map[string]person) any {
 
 // GetFavouriteIceCreamsFromMap returns a slice all ice creams from given people map
 //
-// Using nested range loops to append to slice:
+// Using range loop to append to slice...:
 //	var iceCreams []string
 //	for _, pers := range people {
-//		for _, iceCream := range pers.favouriteIceCreams {
-//			iceCreams = append(iceCreams, iceCream)
-//		}
+//		iceCreams = append(iceCreams, pers.favouriteIceCreams...)
 //	}
 //	return iceCreams
 func GetFavouriteIceCreamsFromMap(people map[string]person) []string {
