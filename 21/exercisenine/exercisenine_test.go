@@ -31,3 +31,27 @@ func ExampleRaceConditionIncrementor() {
 	// Output:
 	// false
 }
+
+func ExampleRaceConditionIncrementorWithMutex() {
+	fmt.Println(RaceConditionIncrementorWithMutex() == 100)
+	// Output:
+	// true
+}
+
+func ExampleRaceConditionIncrementorWithAtomic() {
+	fmt.Println(RaceConditionIncrementorWithAtomic() == 100)
+	// Output:
+	// true
+}
+
+func ExampleGetOs() {
+	fmt.Println(GetOs())
+	// Output:
+	// linux
+}
+
+func ExampleGetArch() {
+	fmt.Println(GetArch())
+	// Output:
+	// amd64
+}

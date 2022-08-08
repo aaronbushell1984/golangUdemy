@@ -42,7 +42,6 @@ func RaceConditionCountWithMutex() int {
 			mu.Unlock()
 			wg.Done()
 		}()
-		
 	}
 	wg.Wait()
 	return counter

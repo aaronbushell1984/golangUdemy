@@ -21,9 +21,11 @@ package exercisenine
 import (
 	"runtime"
 	"sync"
+	"sync/atomic"
 )
 
 var wg sync.WaitGroup
+var mu sync.Mutex
 
 type Person struct{
 	name string
@@ -90,4 +92,47 @@ func RaceConditionIncrementor() int {
 	}
 	wg.Wait()
 	return counter
+}
+
+// RaceConditionIncrementorWithMutex solves race condition of RaceConditionIncrementor() using mutex
+func RaceConditionIncrementorWithMutex() int {
+	wg.Add(100)
+	var counter int
+	for i := 0; i < 100; i++ {
+		go func() {
+			mu.Lock()
+			res := counter
+			res++
+			counter = res
+			mu.Unlock()
+			wg.Done()
+		}()		
+	}
+	wg.Wait()
+	return counter
+}
+
+//  RaceConditionIncrementorWithAtomic solves race condition of RaceConditionIncrementor() using sync/atomic
+func RaceConditionIncrementorWithAtomic() int64 {
+	wg.Add(100)
+	var counter int64
+	for i := 0; i < 100; i++ {
+		go func() {
+			atomic.AddInt64(&counter, 1)
+			wg.Done()
+		}()
+		
+	}
+	wg.Wait()
+	return counter
+}
+
+// GetOs returns the current operating system
+func GetOs() string {
+	return runtime.GOOS
+}
+
+// GetArch returns the current architecture
+func GetArch() string {
+	return runtime.GOARCH
 }

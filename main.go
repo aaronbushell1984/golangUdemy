@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-
+	"github.com/aaronbushell1984/golangUdemy/21/exercisenine"
 	"github.com/aaronbushell1984/golangUdemy/4-5/dependency"
 	"github.com/aaronbushell1984/golangUdemy/4-5/module"
 	"github.com/aaronbushell1984/golangUdemy/4-5/printlnreturns"
@@ -16,4 +16,6 @@ func main() {
 	printlnreturns.PrintNumberAndError()
 	s := "Mrunalini"
 	fmt.Println(stringtypes.PrintStringCodepoints(s))
+	fmt.Println(exercisenine.GetOs())
+	fmt.Println(exercisenine.GetArch())
 }
