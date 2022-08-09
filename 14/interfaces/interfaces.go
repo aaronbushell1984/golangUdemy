@@ -1,20 +1,20 @@
 // Package interfaces demonstrates the use of interfaces in gp
 package interfaces
 
-type food struct {
+type Food struct {
 	name    string
 	colour  string
 	spoiled bool
 }
 
 // perishable represents behaviour to spoil food
-type perishable interface {
-	Spoil() food
+type Perishable interface {
+	Spoil() Food
 }
 
 // MakeFood constructs a variable of type food
-func MakeFood(nme string, clr string, spld bool) food {
-	return food{
+func MakeFood(nme string, clr string, spld bool) Food {
+	return Food{
 		nme,
 		clr,
 		spld,
@@ -23,7 +23,7 @@ func MakeFood(nme string, clr string, spld bool) food {
 
 // Spoil attaches to food allowing setting of spoiled field to true using:
 //	food.Spoil(banana)
-func (f food) Spoil() food {
+func (f Food) Spoil() Food {
 	f.spoiled = true
 	return f
 }

@@ -9,17 +9,17 @@ func ExampleMakeFood() {
 	// {banana yellow false}
 }
 
-func ExampleSpoil() {
+func ExampleFood_Spoil() {
 	banana := MakeFood("banana", "yellow", false)
-	banana = food.Spoil(banana)
+	banana = Food.Spoil(banana)
 	fmt.Println(banana)
 	// Output:
 	// {banana yellow true}
 }
 
-func ExamplePersishableSpoil() {
+func ExampleFood_Spoil_persishable() {
 	apple := MakeFood("apple", "red", true)
-	apple = perishable.Spoil(apple)
+	apple = Perishable.Spoil(apple)
 	fmt.Println(apple)
 	// {apple red true}
 }
