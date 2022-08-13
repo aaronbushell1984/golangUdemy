@@ -44,7 +44,7 @@ func ExampleSendBoringChannel() {
 	in := SendBoringChannel("Bill")
 	var strs []string
 	go func() {
-		for  v := range in {
+		for v := range in {
 			strs = append(strs, v)
 		}
 		wg.Done()
@@ -57,21 +57,19 @@ func ExampleSendBoringChannel() {
 
 func ExampleFanInToChannel() {
 	var wg sync.WaitGroup
-	wg.Add(1)
-	ann := SendBoringChannel("Ann")
-	bob := SendBoringChannel("Bob")
-	fanIn := FanInToChannel(ann, bob)
+	fanIn := FanInToChannel(SendBoringChannel("Ann"), SendBoringChannel("Bob"))
 	var strs []string
+	wg.Add(1)
 	go func() {
-		for  v := range fanIn {
-			strs = append(strs, v)
+		for i := 0; i < 5; i++ {
+			strs = append(strs, <-fanIn)
 		}
 		wg.Done()
 	}()
 	wg.Wait()
-	fmt.Println(strs)
+	fmt.Println(sort.StringSlice(strs))
 	// Output:
-	//
+	// [0 Ann is boring 0 Bob is boring 1 Ann is boring 2 Ann is boring 1 Bob is boring]
 }
 
 

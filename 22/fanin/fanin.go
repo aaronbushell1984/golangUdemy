@@ -5,9 +5,7 @@ package fanin
 
 import (
 	"fmt"
-	// "math/rand"
 	"sync"
-	// "time"
 )
 
 // SendOddAndEvenToChannel sends numbers 1-10 to respective even and odd channels
@@ -44,19 +42,19 @@ func FanInReceiveOddAndEvenChannel(even, odd <-chan string, fanin chan<- string)
 	close(fanin)
 }
 
-// SendBoringChannel send a message to a recive channel using the provided name
+// SendBoringChannel sends a message to a receive channel using the provided name
 func SendBoringChannel(name string) <-chan string {
 	c := make(chan string)
 	go func(){
 		defer close(c)
 		for i := 0; i < 3; i++ {
 			c <- fmt.Sprintf("%v %v is boring", i, name)
-			// time.Sleep(time.Duration(rand.Intn(1e3)) * time.Millisecond)
 		}
 	}()
 	return c
 }
 
+// FanInToChannel takes in two receive channels and returns a receive channel
 func FanInToChannel(ann, bob <-chan string) <-chan string {
 	c := make(chan string)
 	go func() {
