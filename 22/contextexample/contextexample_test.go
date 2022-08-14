@@ -10,7 +10,7 @@ func ExampleGetContextType() {
 	fmt.Println(GetContextType(ctx))
 	ctxCan, err := context.WithCancel(ctx)
 	fmt.Println(GetContextType(ctxCan))
-	fmt.Println(err)
+	fmt.Println(GetContextErrorType(err))
 	type key int
 	type value string
 	var key1 key = 1
@@ -20,20 +20,20 @@ func ExampleGetContextType() {
 	// Output:
 	// *context.emptyCtx
 	// *context.cancelCtx
-	// 0x4a8d20
+	// context.CancelFunc
 	// *context.valueCtx
 }
 
-func ExampleGetContextErrorBeforeCancel() {
+func ExampleGetContextError() {
 	ctx := context.Background()
-	fmt.Println(GetContextErrorBeforeCancel(ctx))
+	fmt.Println(GetContextError(ctx))
 	ctxCan, err := context.WithCancel(ctx)
 	fmt.Println(GetContextType(ctxCan))
-	fmt.Println(err)
+	fmt.Println(GetContextErrorType(err))
 	// Output:
 	// <nil>
 	// *context.cancelCtx
-	// 0x4a8d20
+	// context.CancelFunc
 }
 
 func ExampleGetContextErrorType() {
@@ -45,12 +45,16 @@ func ExampleGetContextErrorType() {
 }
 
 
-func ExampleGetContextErrorAfterCancel() {
+func ExampleCancelAndReturnErrorContext() {
 	ctx := context.Background()
-	fmt.Println(GetContextErrorAfterCancel(ctx))
+	fmt.Println(ctx.Err())
+	fmt.Println(CancelAndReturnErrorContext(ctx))
 	// Output:
 	// context canceled
 }
 
-
-
+func ExampleCancelGoRoutineWithContext() {
+	fmt.Println(CancelGoRoutineWithContext())
+	// Output:
+	// [1 2 3 4 5 6 7 8 9]
+}
