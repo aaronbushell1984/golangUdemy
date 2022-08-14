@@ -3,6 +3,7 @@ package fanin
 import (
 	"fmt"
 	"sort"
+	"strings"
 	"sync"
 )
 
@@ -67,9 +68,9 @@ func ExampleFanInToChannel() {
 		wg.Done()
 	}()
 	wg.Wait()
-	fmt.Println(sort.StringSlice(strs))
+	fmt.Println(strings.Contains(strs[0], "Ann") || strings.Contains(strs[0], "Bob"))
 	// Output:
-	// [0 Ann is boring 0 Bob is boring 1 Ann is boring 2 Ann is boring 1 Bob is boring]
+	// true
 }
 
 
