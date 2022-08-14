@@ -10,6 +10,10 @@ func GetContextType(ctx context.Context) string {
 	return fmt.Sprintf("%T", ctx)
 }
 
+func GetContextErrorType(err context.CancelFunc) string {
+	return fmt.Sprintf("%T", err)
+}
+
 func GetContextErrorBeforeCancel(ctx context.Context) string {
 	return fmt.Sprintf("%v", ctx.Err())
 }
