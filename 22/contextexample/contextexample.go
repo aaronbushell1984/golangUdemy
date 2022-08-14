@@ -42,6 +42,9 @@ func CancelAndReturnErrorContext(ctx context.Context) string {
 	return fmt.Sprintf("%v", ctx.Err())
 }
 
+// CancelGoRoutineWithContext uses a contexed go routine to add numbers to a slice every 200 milliseconds
+//
+// After 2 seconds the routine is cancelled and slice returned
 func CancelGoRoutineWithContext() []int {
 	ctx, cancel := context.WithCancel(context.Background())
 	var numbers []int
