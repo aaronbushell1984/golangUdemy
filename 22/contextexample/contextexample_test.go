@@ -50,6 +50,7 @@ func ExampleCancelAndReturnErrorContext() {
 	fmt.Println(ctx.Err())
 	fmt.Println(CancelAndReturnErrorContext(ctx))
 	// Output:
+	// <nil>
 	// context canceled
 }
 

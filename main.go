@@ -2,7 +2,9 @@ package main
 
 import (
 	"fmt"
+
 	"github.com/aaronbushell1984/golangUdemy/21/exercisenine"
+	"github.com/aaronbushell1984/golangUdemy/24/errorhandling"
 	"github.com/aaronbushell1984/golangUdemy/4-5/dependency"
 	"github.com/aaronbushell1984/golangUdemy/4-5/module"
 	"github.com/aaronbushell1984/golangUdemy/4-5/printlnreturns"
@@ -18,4 +20,5 @@ func main() {
 	fmt.Println(stringtypes.PrintStringCodepoints(s))
 	fmt.Println(exercisenine.GetOs())
 	fmt.Println(exercisenine.GetArch())
+	errorhandling.AskThreeQuestionsAndDisplayOutput()
 }
