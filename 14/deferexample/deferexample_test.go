@@ -15,3 +15,21 @@ func ExampleGetSecondFirst() {
 	// Output:
 	// [second]
 }
+
+func ExampleFirstInLastOut() {
+	fmt.Println(FirstInLastOut())
+	// Output:
+	// 5
+	// 4
+	// 3
+	// 2
+	// 1
+}
+
+func ExampleDeferCapturedAtTimeOfCall() {
+	fmt.Println(DeferCapturedAtTimeOfCall())
+	// Output:
+	// 0
+	// 1
+}
+
