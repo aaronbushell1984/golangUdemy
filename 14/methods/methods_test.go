@@ -9,7 +9,7 @@ func ExampleMakeFood() {
 	// {banana yellow false}
 }
 
-func ExampleSpoil() {
+func Examplefood_Spoil() {
 	banana := MakeFood("banana", "yellow", false)
 	banana = food.Spoil(banana)
 	fmt.Println(banana)
