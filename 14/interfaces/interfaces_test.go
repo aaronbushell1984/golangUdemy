@@ -16,10 +16,3 @@ func ExampleFood_Spoil() {
 	// Output:
 	// {banana yellow true}
 }
-
-func ExampleFood_Spoil_persishable() {
-	apple := MakeFood("apple", "red", true)
-	apple = Perishable.Spoil(apple)
-	fmt.Println(apple)
-	// {apple red true}
-}
