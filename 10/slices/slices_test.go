@@ -95,7 +95,7 @@ func BenchmarkGetAppendedMadeSlice(b *testing.B) {
 }
 
 func ExampleGetAppendedSlice() {
-	madeSlice := make([]int, 4, 4)
+	madeSlice := make([]int, 4)
 	fmt.Println(GetAppendedSlice(madeSlice, 6, 9, 9, 1000))
 	// Output:
 	// [0 0 0 0 6 9 9 1000]

@@ -1,8 +1,6 @@
 // Package funcexpression demonstrates assigning a function to a value
 package funcexpression
 
-import "fmt"
-
 // GetHelloWorld assigns a function to value HelloWorld:
 //
 //	HelloWorld := func() string {
@@ -14,7 +12,7 @@ import "fmt"
 //	return Hello()
 func GetHelloWorld() string {
 	HelloWorld := func() string {
-		return fmt.Sprintf("Hello World")
+		return "Hello World"
 	}
 	return HelloWorld()
 }

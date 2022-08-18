@@ -1,6 +1,6 @@
 // Package fanin demonstrates the fan in concurrency design pattern in go
 //
-// This is used after launching nultiple routines to collect the data into a single channel for results
+// This is used after launching multiple routines to collect the data into a single channel for results
 package fanin
 
 import (

@@ -18,7 +18,8 @@ func GetTypeOfSlice[T []int | []string | []float64 | []float32](slice T) string 
 
 // GetPartSlice returns selected part of a slice
 func GetPartSlice(slice []int, start int, end int) []int {
-	return append(slice[start : end+1])
+	slice = (slice[start : end+1])
+	return slice
 }
 
 // AddToSlice returns a slice of integers appended by any number of integers

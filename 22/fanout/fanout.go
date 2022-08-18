@@ -16,7 +16,7 @@ import (
 //
 // This can be launched inside a go routine and results ranged over as per example
 func Populate(c chan int, count int) {
-	for i := 0; i < count; i++ {
+	for i := 1; i < count; i++ {
 		c <- i
 	}
 	close(c)
@@ -26,7 +26,7 @@ func Populate(c chan int, count int) {
 //
 // This is used to simulate work for go routines to complete with FanOutIn
 func TimeConsumingWork(value int) int {
-	rand.Seed(time.Now().Unix())
+	rand.Seed(time.Now().UnixNano())
 	n := rand.Intn(value)
 	time.Sleep(time.Microsecond * time.Duration(n))
 	return value
@@ -62,11 +62,11 @@ func FanOutIn(numberPopulateChannel, receiveChannel chan int) {
 // ConcurrentTimeConsumingWork combines Populate, TimeConsumingWork and FanInOut to launch "routines" number of TimeConsumingWork
 func ConcurrentTimeConsumingWork(routines int) []int {
 	var numbers []int
-	numberPopulateChannel := make(chan int)
-	receiveChannel := make(chan int)
-	go Populate(numberPopulateChannel, routines)
-	go FanOutIn(numberPopulateChannel, receiveChannel)
-	for v := range receiveChannel {
+	nPopChan := make(chan int)
+	recChan := make(chan int)
+	go Populate(nPopChan, routines)
+	go FanOutIn(nPopChan, recChan)
+	for v := range recChan {
 		numbers = append(numbers , v)
 	}
 	sort.Ints(numbers)

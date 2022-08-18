@@ -29,9 +29,7 @@ func GetFromSliceByIndex(sliceOfInt []int, index int) int {
 //	}
 func GetAllFromSlice(sliceOfInt []int) string {
 	var result []int
-	for _, v := range sliceOfInt {
-		result = append(result, v)
-	}
+	result = append(result, sliceOfInt...)
 	return fmt.Sprint(result)
 }
 
