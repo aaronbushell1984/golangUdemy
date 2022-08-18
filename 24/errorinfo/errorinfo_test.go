@@ -54,9 +54,6 @@ func ExampleGetSquareRootWithStructError() {
 	// 0 struct error: Udemy, Aaron, not allowed to less or equal to zero
 }
 
-
-
-
 func ExampleGetTypeOfError() {
 	fmt.Println(GetTypeOfError(errErrorinfo))
 	// Output:
