@@ -1,19 +1,19 @@
 // Package polymorphism demonstrates polymorphism in go
 //
-// Declaring the interface perishable defines the behaviour to spoil food:
+// Declaring the interface perishable defines the behaviour to spoil Food:
 //
 //	type perishable interface {
-//		Spoil() food
+//		Spoil() Food
 //	}
 //
-// Attaching the spoil method to type food:
+// Attaching the spoil method to type Food:
 //
-//	func (f food) Spoil() food {
+//	func (f Food) Spoil() Food {
 //		f.spoiled = true
 //		return f
 //	}
 //
-// Allows an apple to be of type food AND perishable:
+// Allows an apple to be of type Food AND perishable:
 //
 //	func ExampleTestIsPerishable() {
 //		apple := MakeFood("apple", "red", true)
@@ -26,7 +26,7 @@
 //		}
 package polymorphism
 
-type food struct {
+type Food struct {
 	name    string
 	colour  string
 	spoiled bool
@@ -41,15 +41,15 @@ type flower struct {
 // perishable represents behaviour to spoil
 //
 // Only one type can be placed in return:
-//	Spoil() food
+//	Spoil() Food
 // Therefore flower, even though it contains the spoil method is not perishable
 type perishable interface {
-	Spoil() food
+	Spoil() Food
 }
 
-// MakeFood constructs a variable of type food
-func MakeFood(nme string, clr string, spld bool) food {
-	return food{
+// MakeFood constructs a variable of type Food
+func MakeFood(nme string, clr string, spld bool) Food {
+	return Food{
 		name:    nme,
 		colour:  clr,
 		spoiled: spld,
@@ -65,10 +65,10 @@ func MakeFlower(nme string, clr string, spld bool) flower {
 	}
 }
 
-// Spoil attaches to food allowing setting of spoiled field to true using:
+// Spoil attaches to Food allowing setting of spoiled field to true using:
 //
-//	food.Spoil(banana)
-func (f food) Spoil() food {
+//	Food.Spoil(banana)
+func (f Food) Spoil() Food {
 	f.spoiled = true
 	return f
 }
@@ -81,10 +81,10 @@ func (f flower) Spoil() flower {
 	return f
 }
 
-// TestIsFood checks if the passed in variable is of type food using a type assertion:
+// TestIsFood checks if the passed in variable is of type Food using a type assertion:
 //	t, ok := i.(T)
 func TestIsFood(underTest interface{}) bool {
-	_, ok := underTest.(food)
+	_, ok := underTest.(Food)
 	return ok
 }
 
@@ -92,7 +92,7 @@ func TestIsFood(underTest interface{}) bool {
 //	t, ok := i.(T)
 // NB. flower is NOT perishable because OR is not allowed in return type of interface:
 //	type perishable interface {
-//		Spoil() food
+//		Spoil() Food
 //	}
 
 func TestIsPerishable(underTest interface{}) bool {

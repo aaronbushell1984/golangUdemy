@@ -1,6 +1,8 @@
 package exerciseeight
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func ExampleMarshalUser() {
 	u1 := user{

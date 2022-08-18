@@ -16,9 +16,9 @@ func ExampleMakeFlower() {
 	// {rose red false}
 }
 
-func Examplefood_Spoil() {
+func ExampleFood_Spoil() {
 	banana := MakeFood("banana", "yellow", false)
-	banana = food.Spoil(banana)
+	banana = Food.Spoil(banana)
 	rose := MakeFlower("rose", "red", false)
 	rose = flower.Spoil(rose)
 	fmt.Println(banana)

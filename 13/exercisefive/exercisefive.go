@@ -132,8 +132,8 @@ func GetFavouriteIceCreamsFromMap(people map[string]person) []string {
 	return iceCreams
 }
 
-// makeTruck constructs a new truck which is an outer type of vehicle
-func makeTruck(drs int, clr string, fWDve bool) truck {
+// MakeTruck constructs a new truck which is an outer type of vehicle
+func MakeTruck(drs int, clr string, fWDve bool) truck {
 	return truck{
 		vehicle{
 			drs,
@@ -143,8 +143,8 @@ func makeTruck(drs int, clr string, fWDve bool) truck {
 	}
 }
 
-// makeSedan constructs a new sedan which is an outer type of vehicle
-func makeSedan(drs int, clr string, lux bool) sedan {
+// MakeSedan constructs a new sedan which is an outer type of vehicle
+func MakeSedan(drs int, clr string, lux bool) sedan {
 	return sedan{
 		vehicle{
 			drs,
@@ -154,11 +154,11 @@ func makeSedan(drs int, clr string, lux bool) sedan {
 	}
 }
 
-// makeAnonymousSportsCar constructs a car with a new field anonymously, for example:
+// MakeAnonymousSportsCar constructs a car with a new field anonymously, for example:
 //	ferrari := makeAnonymousSportsCar(4, "red", false)
 // Its fields can not be accessed outside the function like:
 // 	ferrari.doors
-func makeAnonymousSportsCar(drs int, clr string, nos bool) any {
+func MakeAnonymousSportsCar(drs int, clr string, nos bool) any {
 	any := struct {
 		vehicle
 		nitrox bool
