@@ -23,10 +23,10 @@ import (
 )
 
 type people []struct {
-	First 	string `json:"First"`
-	Last  	string `json:"Last"`
-	Age   	int    `json:"Age,omitempty"`
-	Option  string `json:"-"`
+	First  string `json:"First"`
+	Last   string `json:"Last"`
+	Age    int    `json:"Age,omitempty"`
+	Option string `json:"-"`
 }
 
 // Unmarshal takes the slice of byte data and unmarshals to the people []struct

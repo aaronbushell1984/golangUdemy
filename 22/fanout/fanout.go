@@ -67,7 +67,7 @@ func ConcurrentTimeConsumingWork(routines int) []int {
 	go Populate(nPopChan, routines)
 	go FanOutIn(nPopChan, recChan)
 	for v := range recChan {
-		numbers = append(numbers , v)
+		numbers = append(numbers, v)
 	}
 	sort.Ints(numbers)
 	return numbers
@@ -83,7 +83,7 @@ func ConcurrentTimeConsumingWork(routines int) []int {
 func SequentialTimeConsumingWork(count int) []int {
 	var numbers []int
 	for i := 1; i < count; i++ {
-		numbers = append(numbers , TimeConsumingWork(i))
+		numbers = append(numbers, TimeConsumingWork(i))
 	}
 	return numbers
 }
@@ -96,7 +96,7 @@ func ThrottleFanOutIn(numberPopulateChannel chan int, receiveChannel chan int, t
 	wg.Add(throttle)
 	for i := 0; i < throttle; i++ {
 		go func() {
-			for v := range numberPopulateChannel {	
+			for v := range numberPopulateChannel {
 				func(v2 int) {
 					receiveChannel <- TimeConsumingWork(v2)
 				}(v)
@@ -122,7 +122,7 @@ func ThrottleConcurrentTimeConsumingWork(count int, throttle int) []int {
 	go Populate(numberPopulateChannel, count)
 	go ThrottleFanOutIn(numberPopulateChannel, receiveChannel, throttle)
 	for v := range receiveChannel {
-		numbers = append(numbers , v)
+		numbers = append(numbers, v)
 	}
 	sort.Ints(numbers)
 	return numbers

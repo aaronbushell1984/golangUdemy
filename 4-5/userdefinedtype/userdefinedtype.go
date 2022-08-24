@@ -14,6 +14,7 @@ func PrintUnderlyingType(mytype interface{}) string {
 }
 
 type mytypeint int
+
 var result int
 
 // Conversion is idiom in go not casting

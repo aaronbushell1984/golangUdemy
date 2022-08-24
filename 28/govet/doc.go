@@ -1,6 +1,6 @@
 /*
 This package just houses documentation on go go vet.
-	
+
 At https://pkg.go.dev/cmd/vet:
 
 	"Vet examines Go source code and reports suspicious constructs, such as Printf calls whose arguments do not align with the format string.

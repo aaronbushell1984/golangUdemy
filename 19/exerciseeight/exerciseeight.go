@@ -27,8 +27,6 @@ type agent struct {
 	Sayings []string
 }
 
-
-
 // MarshalUser takes an array of user and returns the json in string format
 func MarshalUser(users []user) string {
 	userJson, err := json.Marshal(users)
@@ -78,10 +76,10 @@ func SortStrings(strings []string) {
 
 // SortPeopleAgeLast sorts people by age and then last name
 func SortPeopleAgeLast(people []person) {
-	sort.SliceStable(people, func(i, j int) bool{
+	sort.SliceStable(people, func(i, j int) bool {
 		return people[i].Age < people[j].Age
 	})
-	sort.SliceStable(people, func(i, j int) bool{
+	sort.SliceStable(people, func(i, j int) bool {
 		return people[i].Last < people[j].Last
 	})
 }

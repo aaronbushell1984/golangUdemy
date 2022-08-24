@@ -10,7 +10,7 @@ import "fmt"
 // }
 
 func ExampleGetChannelType() {
-	c:= make(chan int)
+	c := make(chan int)
 	fmt.Println(GetChannelType(c))
 	// Output:
 	// chan int
@@ -32,5 +32,5 @@ func ExampleBufferedChannelCodeContinues() {
 // func ExampleBufferedChannelTooSmallCodeBlocked() {
 // 	fmt.Println(BufferedChannelTooSmallCodeBlocked())
 // 	// Output:
-// 	// 
+// 	//
 // }

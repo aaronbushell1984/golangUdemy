@@ -37,7 +37,7 @@ func ExampleDisplayQuestion() {
 	question := "What is your name? "
 	DisplayQuestion(question)
 	// Output:
-	// Question - What is your name?  
+	// Question - What is your name?
 }
 
 func ExampleDisplayAnswer() {
@@ -73,14 +73,3 @@ func ExampleOpenFileReadAndClose() {
 	// Example Content
 	// open missing.txt: no such file or directory
 }
-
-
-
-
-
-
-
-
-
-
-

@@ -10,12 +10,12 @@ func ConsumeMultipleReadOnlyChannels() (<-chan int, <-chan int, <-chan int) {
 	even := make(chan int)
 	odd := make(chan int)
 	quit := make(chan int)
-	go func(){
+	go func() {
 		for i := 0; i < 10; i++ {
-			if i % 2 == 0 {
+			if i%2 == 0 {
 				even <- i
 			}
-			if i % 2 != 0 {
+			if i%2 != 0 {
 				odd <- i
 			}
 		}

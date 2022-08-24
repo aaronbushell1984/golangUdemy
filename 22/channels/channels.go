@@ -28,7 +28,7 @@ import "fmt"
 
 // ChannelBlock demonstrates a channel blocks
 func ChannelBlock() int {
-	c:= make(chan int)
+	c := make(chan int)
 	c <- 42
 	return <-c
 }
@@ -45,7 +45,7 @@ func GetChannelType(channel interface{}) string {
 // Value is received into return from channel before function exits:
 //	return <-c
 func ChannelBlockedCodeContinues() int {
-	c:= make(chan int)
+	c := make(chan int)
 	go func() {
 		c <- 42
 	}()

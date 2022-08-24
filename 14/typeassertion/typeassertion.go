@@ -14,5 +14,5 @@ func IsIntOrInt64(n interface{}) bool {
 		return true
 	default:
 		return false
-	}	
+	}
 }

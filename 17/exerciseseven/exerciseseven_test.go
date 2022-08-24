@@ -20,4 +20,3 @@ func ExampleChangeMe() {
 	// {James}
 	// {Mary}
 }
-

@@ -14,7 +14,7 @@ func GetSum(numbers ...int) int {
 func GetEven(numbers ...int) []int {
 	var evens []int
 	for _, v := range numbers {
-		if v % 2 == 0 && v != 0 {
+		if v%2 == 0 && v != 0 {
 			evens = append(evens, v)
 		}
 	}
@@ -39,7 +39,7 @@ func GetEvenSum(getSum func(numbers ...int) int, numbers ...int) int {
 func GetOdd(numbers ...int) []int {
 	var odds []int
 	for _, v := range numbers {
-		if v % 2 != 0 && v != 0 {
+		if v%2 != 0 && v != 0 {
 			odds = append(odds, v)
 		}
 	}

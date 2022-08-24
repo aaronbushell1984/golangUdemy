@@ -20,7 +20,7 @@ package tabletests
 //		if got != v.answer {
 //			t.Errorf("Got: %v Want: %v", got, v.answer)
 //		}
-//	}	
+//	}
 func Sum(numbers ...int) int {
 	var res int
 	for _, v := range numbers {

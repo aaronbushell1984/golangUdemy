@@ -18,7 +18,7 @@ var wg sync.WaitGroup
 // 			atomic.AddInt64(&counter, 1)
 //			runtime.Gosched()
 //			wg.Done()
-//		}()	
+//		}()
 //	}
 // This function is slower than a regular loop and faster than mutex:
 //	BenchmarkRaceConditionCountWithAtomic-16 1000000000 0.0000880 ns/op 0 B/op 0 allocs/op
@@ -33,7 +33,7 @@ func RaceConditionCountWithAtomic() int64 {
 			runtime.Gosched()
 			wg.Done()
 		}()
-		
+
 	}
 	wg.Wait()
 	return counter

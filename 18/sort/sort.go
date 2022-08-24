@@ -18,22 +18,34 @@ func TestSortedInts(data ...int) bool {
 }
 
 // StableSortPeopleAscendingByAge sorts people by name then age and guarantees stable sort
-func StableSortPeopleAscendingByAgeName(people []struct{Name string; Age int}) []struct{Name string; Age int} {
-	sort.SliceStable(people, func(i, j int) bool{
+func StableSortPeopleAscendingByAgeName(people []struct {
+	Name string
+	Age  int
+}) []struct {
+	Name string
+	Age  int
+} {
+	sort.SliceStable(people, func(i, j int) bool {
 		return people[i].Name < people[j].Name
 	})
-	sort.SliceStable(people, func(i, j int) bool{
+	sort.SliceStable(people, func(i, j int) bool {
 		return people[i].Age < people[j].Age
 	})
 	return people
 }
 
 // SortPeopleAscendingByAge sorts people by name then age and does not guarantee stable sort
-func SortPeopleAscendingByAgeName(people []struct{Name string; Age int}) []struct{Name string; Age int} {
-	sort.Slice(people, func(i, j int) bool{
+func SortPeopleAscendingByAgeName(people []struct {
+	Name string
+	Age  int
+}) []struct {
+	Name string
+	Age  int
+} {
+	sort.Slice(people, func(i, j int) bool {
 		return people[i].Name < people[j].Name
 	})
-	sort.Slice(people, func(i, j int) bool{
+	sort.Slice(people, func(i, j int) bool {
 		return people[i].Age < people[j].Age
 	})
 	return people

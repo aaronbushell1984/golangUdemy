@@ -90,7 +90,7 @@ func CreateFile(name string, contents string) {
 // ReadFile reads the content of the provided file into a string
 //
 // Calling for a missing file produces error to console as per example
-func ReadFile(name string) string  {
+func ReadFile(name string) string {
 	contents, err := os.ReadFile(name)
 	if err != nil {
 		return fmt.Sprint(err)

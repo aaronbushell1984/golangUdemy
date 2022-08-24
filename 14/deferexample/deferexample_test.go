@@ -32,4 +32,3 @@ func ExampleDeferCapturedAtTimeOfCall() {
 	// 0
 	// 1
 }
-

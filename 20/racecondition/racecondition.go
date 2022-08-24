@@ -17,7 +17,7 @@ var wg sync.WaitGroup
 //			res++
 //			counter = res
 //			wg.Done()
-//		}()	
+//		}()
 //	}
 // This leads routines sharing the same memory space and a count of less than 100 in all cases
 func RaceConditionCount() int {
@@ -31,7 +31,7 @@ func RaceConditionCount() int {
 			counter = res
 			wg.Done()
 		}()
-		
+
 	}
 	wg.Wait()
 	return counter

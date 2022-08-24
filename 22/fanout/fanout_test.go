@@ -6,13 +6,12 @@ import (
 	"testing"
 )
 
-
 func ExamplePopulate() {
 	c := make(chan int)
 	var numbers []int
 	go func() {
 		Populate(c, 100)
-	}()	
+	}()
 	for v := range c {
 		numbers = append(numbers, v)
 	}
@@ -38,7 +37,7 @@ func ExampleFanOutIn() {
 	go Populate(numberPopulateChannel, 100)
 	go FanOutIn(numberPopulateChannel, receiveChannel)
 	for v := range receiveChannel {
-		numbers = append(numbers , v)
+		numbers = append(numbers, v)
 	}
 	sort.Ints(numbers)
 	fmt.Println(numbers)
@@ -73,7 +72,7 @@ func ExampleThrottleFanOutIn() {
 	go Populate(numberPopulateChannel, 100)
 	go ThrottleFanOutIn(numberPopulateChannel, receiveChannel, 10)
 	for v := range receiveChannel {
-		numbers = append(numbers , v)
+		numbers = append(numbers, v)
 	}
 	sort.Ints(numbers)
 	fmt.Println(numbers)
@@ -90,4 +89,3 @@ func ExampleThrottleConcurrentTimeConsumingWork() {
 func BenchmarkThrottleConcurrentTimeConsumingWork(b *testing.B) {
 	ThrottleConcurrentTimeConsumingWork(100, 10)
 }
-

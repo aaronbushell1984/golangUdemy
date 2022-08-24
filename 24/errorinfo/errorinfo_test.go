@@ -59,8 +59,3 @@ func ExampleGetTypeOfError() {
 	// Output:
 	// *errors.errorString
 }
-
-
-
-
-

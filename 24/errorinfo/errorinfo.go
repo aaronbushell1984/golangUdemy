@@ -11,7 +11,7 @@
 //		err error
 //	}
 // when the Error() method is attached to the type:
-//	
+//
 package errorinfo
 
 import (
@@ -23,9 +23,9 @@ import (
 var errErrorinfo = errors.New("an error occured in the errorinfo pacakge")
 
 type errErrorinfoStruct struct {
-	course string
+	course  string
 	student string
-	err error
+	err     error
 }
 
 func (er errErrorinfoStruct) Error() string {

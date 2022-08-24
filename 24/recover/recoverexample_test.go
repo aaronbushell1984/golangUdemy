@@ -54,6 +54,3 @@ func ExampleDemonstrateContinueAfterRecover() {
 	// Recovered! Now Resuming...
 	// Continues After Recover...
 }
-
-
-

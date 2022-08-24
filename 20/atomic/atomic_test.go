@@ -11,7 +11,6 @@ func ExampleRaceConditionCountWithAtomic() {
 	// true
 }
 
-
 func BenchmarkRaceConditionCountWithAtomic(b *testing.B) {
 	RaceConditionCountWithAtomic()
 }

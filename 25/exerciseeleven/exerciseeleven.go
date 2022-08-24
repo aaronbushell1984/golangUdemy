@@ -9,19 +9,19 @@ import (
 )
 
 type person struct {
-	First	string
-	Last	string
-	Sayings	[]string
+	First   string
+	Last    string
+	Sayings []string
 }
 
 type ErrCustom struct {
-	prompt 	string
+	prompt string
 }
 
 type SqrtError struct {
-	pack	string
-	meth	string
-	err		error
+	pack string
+	meth string
+	err  error
 }
 
 // MarshalPerson takes a value of type person struct and encodes to a string
@@ -67,7 +67,7 @@ func (e ErrCustom) Error() string {
 func GetEven(numbers []int, e error) ([]int, string) {
 	var evens []int
 	for _, v := range numbers {
-		if v % 2 == 0 {
+		if v%2 == 0 {
 			evens = append(evens, v)
 		}
 		if v == 0 {
@@ -82,7 +82,7 @@ func GetEven(numbers []int, e error) ([]int, string) {
 // This allows access to a field on the ErrCustom struct (prompt) via:
 //	e.(ErrCustom).prompt
 // Direct access of prompt from the error value would not work:
-//	e.prompt	
+//	e.prompt
 func Assertion(e error) string {
 	return e.(ErrCustom).prompt
 }
@@ -96,7 +96,7 @@ func (se SqrtError) Error() string {
 func Sqrt(n float64) (float64, error) {
 	if n <= 0 {
 		e := errors.New("cannot supply a number less than or equal to zero")
-		return 0, SqrtError{pack: "exerciseeleven", meth: "sqrt", err: e,}
+		return 0, SqrtError{pack: "exerciseeleven", meth: "sqrt", err: e}
 	}
 	return math.Sqrt(n), nil
 }

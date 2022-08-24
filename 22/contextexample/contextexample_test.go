@@ -44,7 +44,6 @@ func ExampleGetContextErrorType() {
 	// context.CancelFunc
 }
 
-
 func ExampleCancelAndReturnErrorContext() {
 	ctx := context.Background()
 	fmt.Println(ctx.Err())

@@ -17,7 +17,6 @@ func ExampleRegularCounterLoop() {
 	// true
 }
 
-
 func BenchmarkRaceConditionCountWithMutex(b *testing.B) {
 	RaceConditionCountWithMutex()
 }

@@ -36,6 +36,3 @@ func ExampleGetLoopFactorial() {
 func BenchmarkGetLoopFactorial(b *testing.B) {
 	GetLoopFactorial(100)
 }
-
-
-

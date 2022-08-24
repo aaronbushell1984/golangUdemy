@@ -70,7 +70,6 @@ func LogWithFileNoFileError(create string, open string) string {
 	return "File Created Opened and Closed Successfully"
 }
 
-
 // LogWithFileFatalNoFileError creates a file named first argument and attempts to open file named the second argument
 //
 // Captured errors are logged to the first file as fatal which would terminate the program if used:
@@ -128,7 +127,7 @@ func PrintPanicNoFileError(create string, open string) string {
 	f, err := os.Create(create)
 	if err != nil {
 		panic(err)
-		
+
 	}
 	defer f.Close()
 	f2, err := os.Open(open)

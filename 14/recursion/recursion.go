@@ -13,7 +13,7 @@ func GetRecursiveFactorial(number int) int {
 	if number == 0 {
 		return 1
 	}
-	return number * GetRecursiveFactorial(number -1)
+	return number * GetRecursiveFactorial(number-1)
 }
 
 // GetLoopFactorial provides the factorial of a number using a loop:

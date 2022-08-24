@@ -3,6 +3,7 @@ package exercises
 import "testing"
 
 type mytypeint int
+
 var myint mytypeint
 var regularint int
 

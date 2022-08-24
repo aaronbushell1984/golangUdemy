@@ -4,9 +4,9 @@ import "fmt"
 
 func ExampleMarshalPerson() {
 	jb := person{
-		First:		"James",
-		Last:		"Bond",
-		Sayings:	[]string{"Shaken, not stirred", "Any last wishes?", "Never say never"},
+		First:   "James",
+		Last:    "Bond",
+		Sayings: []string{"Shaken, not stirred", "Any last wishes?", "Never say never"},
 	}
 	fmt.Println(MarshalPerson(jb))
 	// Output:
@@ -15,9 +15,9 @@ func ExampleMarshalPerson() {
 
 func ExampleJsonPerson() {
 	jb := person{
-		First:		"James",
-		Last:		"Bond",
-		Sayings:	[]string{"Shaken, not stirred", "Any last wishes?", "Never say never"},
+		First:   "James",
+		Last:    "Bond",
+		Sayings: []string{"Shaken, not stirred", "Any last wishes?", "Never say never"},
 	}
 	fmt.Println(JsonPerson(jb))
 	// Output:
@@ -61,7 +61,7 @@ func ExampleSqrtError_Error() {
 	se := SqrtError{
 		pack: "exerciseelven_test",
 		meth: "Example_SqrtError_Error",
-		err: nil,
+		err:  nil,
 	}
 	fmt.Println(SqrtError.Error(se))
 	// Output:

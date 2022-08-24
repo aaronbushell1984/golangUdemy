@@ -13,7 +13,7 @@ func ExampleConsumeMultipleReadOnlyChannels() {
 		case v, ok := <-q:
 			fmt.Printf("Quitting on: %v Function ran ok?: %v", v, ok)
 			return
-		}		
+		}
 	}
 	// Output:
 	// Even: 0	Odd: 1	Even: 2	Odd: 3	Even: 4	Odd: 5	Even: 6	Odd: 7	Even: 8	Odd: 9	Quitting on: 10 Function ran ok?: true
@@ -21,7 +21,7 @@ func ExampleConsumeMultipleReadOnlyChannels() {
 
 func ExampleConfirmValueReadFromChannel() {
 	value, k := ConfirmValueReadFromChannel()
-	fmt.Printf("%v %v",value, k)
+	fmt.Printf("%v %v", value, k)
 	// Output:
 	// 42 true
 }
@@ -32,5 +32,3 @@ func ExampleConfirmValueReadFromChannelClose() {
 	// Output:
 	// 42 true
 }
-
-

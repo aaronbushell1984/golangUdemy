@@ -20,7 +20,7 @@ func ExampleSendToOddAndEvenChannels() {
 	sort.Strings(numbers)
 	fmt.Println(numbers)
 	// Output:
-	// [Even: 10 Even: 2 Even: 4 Even: 6 Even: 8 Odd: 1 Odd: 3 Odd: 5 Odd: 7 Odd: 9]	
+	// [Even: 10 Even: 2 Even: 4 Even: 6 Even: 8 Odd: 1 Odd: 3 Odd: 5 Odd: 7 Odd: 9]
 }
 
 func ExampleFanInReceiveOddAndEvenChannel() {
@@ -72,6 +72,3 @@ func ExampleFanInToChannel() {
 	// Output:
 	// true
 }
-
-
-

@@ -47,4 +47,3 @@ func ExamplePrintPanicNoFileError() {
 	// Output:
 	// File Created Opened and Closed Successfully
 }
-

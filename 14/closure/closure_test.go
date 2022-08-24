@@ -21,4 +21,3 @@ func ExampleIncrement() {
 	// 4
 	// 3
 }
-

@@ -27,7 +27,7 @@ import (
 var wg sync.WaitGroup
 var mu sync.Mutex
 
-type Person struct{
+type Person struct {
 	name string
 }
 
@@ -88,7 +88,7 @@ func RaceConditionIncrementor() int {
 			counter = res
 			wg.Done()
 		}()
-		
+
 	}
 	wg.Wait()
 	return counter
@@ -106,7 +106,7 @@ func RaceConditionIncrementorWithMutex() int {
 			counter = res
 			mu.Unlock()
 			wg.Done()
-		}()		
+		}()
 	}
 	wg.Wait()
 	return counter
@@ -121,7 +121,7 @@ func RaceConditionIncrementorWithAtomic() int64 {
 			atomic.AddInt64(&counter, 1)
 			wg.Done()
 		}()
-		
+
 	}
 	wg.Wait()
 	return counter

@@ -7,16 +7,16 @@ import (
 
 type Person struct {
 	First string
-	Last string
-	Age int
+	Last  string
+	Age   int
 }
 
 // MakePerson makes a Person by passing the fields it requires
 func MakePerson(f string, l string, a int) Person {
 	made := Person{
 		First: f,
-		Last: l,
-		Age: a,
+		Last:  l,
+		Age:   a,
 	}
 	return made
 }

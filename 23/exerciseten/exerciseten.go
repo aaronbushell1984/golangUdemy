@@ -30,7 +30,7 @@ func ReceiveFromBufferedChannel() int {
 // receives the value and cannot be misused by sending information to channel
 func GetValueInReceiveOnlyChannel() <-chan int {
 	c := make(chan int)
-	go func(){
+	go func() {
 		c <- 42
 	}()
 	return c
@@ -121,7 +121,7 @@ func GetOkFromClosedChannel() string {
 	}()
 	_, ok := <-c
 	fmt.Printf("The first ok is: %v\n", ok)
-	close(c)	
+	close(c)
 	_, ok = <-c
 	return fmt.Sprintf("The second ok is: %v", ok)
 }
@@ -134,7 +134,7 @@ func FanOut10GoRoutinesCountingToTen() <-chan int {
 			for i := 1; i < 11; i++ {
 				c <- i
 			}
-		}() 
+		}()
 	}
 	return c
 }

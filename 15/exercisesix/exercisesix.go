@@ -8,8 +8,8 @@ import (
 
 type person struct {
 	first string
-	last string
-	age int
+	last  string
+	age   int
 }
 
 type vocal interface {
@@ -120,12 +120,12 @@ func GetArea(s shape) float64 {
 // GetStringAnonymousFunc demonstrates an anonymous function:
 //	func() {
 //		anonymousResult = "I was created by anonymous function"
-//	}() 
+//	}()
 func GetStringAnonymousFunc() string {
 	var anonymousResult string
 	func() {
-		 anonymousResult = "I was created by anonymous function"
-	}() 
+		anonymousResult = "I was created by anonymous function"
+	}()
 	return anonymousResult
 }
 
@@ -176,4 +176,3 @@ func Iterate() func() int {
 		return i
 	}
 }
-

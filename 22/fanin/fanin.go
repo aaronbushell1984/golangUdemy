@@ -9,12 +9,12 @@ import (
 )
 
 // SendOddAndEvenToChannel sends numbers 1-10 to respective even and odd channels
-func SendToOddAndEvenChannels(even, odd  chan<- string) {
+func SendToOddAndEvenChannels(even, odd chan<- string) {
 	for i := 1; i < 11; i++ {
-		if i % 2 == 0 {
+		if i%2 == 0 {
 			even <- fmt.Sprintf("Even: %v", i)
 		}
-		if i % 2 != 0 {
+		if i%2 != 0 {
 			odd <- fmt.Sprintf("Odd: %v", i)
 		}
 	}
@@ -45,7 +45,7 @@ func FanInReceiveOddAndEvenChannel(even, odd <-chan string, fanin chan<- string)
 // SendBoringChannel sends a message to a receive channel using the provided name
 func SendBoringChannel(name string) <-chan string {
 	c := make(chan string)
-	go func(){
+	go func() {
 		defer close(c)
 		for i := 0; i < 3; i++ {
 			c <- fmt.Sprintf("%v %v is boring", i, name)

@@ -56,4 +56,3 @@ func ExampleSortPeopleAscendingByAgeName() {
 	// Output:
 	// [{Alice 25} {Elizabeth 25} {Bob 25} {Colin 25} {Alice 75} {Bob 75} {Elizabeth 75} {Alice 75}]
 }
-

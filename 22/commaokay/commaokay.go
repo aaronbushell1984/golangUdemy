@@ -11,12 +11,12 @@ func ConsumeMultipleReadOnlyChannels() (<-chan int, <-chan int, <-chan int) {
 	even := make(chan int)
 	odd := make(chan int)
 	quit := make(chan int)
-	go func(){
+	go func() {
 		for i := 0; i < 10; i++ {
-			if i % 2 == 0 {
+			if i%2 == 0 {
 				even <- i
 			}
-			if i % 2 != 0 {
+			if i%2 != 0 {
 				odd <- i
 			}
 		}
@@ -29,7 +29,7 @@ func ConsumeMultipleReadOnlyChannels() (<-chan int, <-chan int, <-chan int) {
 //		go func() {
 //			c <- 42
 //		}()
-// ok is used to check channel receives 42 successfully 
+// ok is used to check channel receives 42 successfully
 func ConfirmValueReadFromChannel() (int, bool) {
 	c := make(chan int)
 	go func() {
@@ -47,5 +47,5 @@ func ConfirmValueReadFromChannelClose() (int, bool) {
 		c <- 42
 	}()
 	v, ok := <-c
-	return v, ok	
+	return v, ok
 }

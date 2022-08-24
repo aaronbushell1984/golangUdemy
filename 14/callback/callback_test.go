@@ -10,7 +10,7 @@ func ExampleGetSum() {
 	// 4
 }
 
-func ExampleGetEven(){
+func ExampleGetEven() {
 	numbers := []int{1, 2, 3, 4, 5}
 	numbers0 := []int{0, 2, 3, 4, 5}
 	numbersMinus := []int{-1, -2, -3, -4, -5}
@@ -23,7 +23,7 @@ func ExampleGetEven(){
 	// [-2 -4]
 }
 
-func ExampleGetEvenSum(){
+func ExampleGetEvenSum() {
 	numbers := []int{1, 2, 3, 4, 5}
 	numbers0 := []int{0, 2, 3, 4, 5}
 	numbersMinus := []int{-1, -2, -3, -4, -5}
@@ -36,7 +36,7 @@ func ExampleGetEvenSum(){
 	// -6
 }
 
-func ExampleGetOdd(){
+func ExampleGetOdd() {
 	numbers := []int{1, 2, 3, 4, 5}
 	numbers0 := []int{0, 2, 3, 4, 5}
 	numbersMinus := []int{-1, -2, -3, -4, -5}
@@ -49,7 +49,7 @@ func ExampleGetOdd(){
 	// [-1 -3 -5]
 }
 
-func ExampleGetOddSum(){
+func ExampleGetOddSum() {
 	numbers := []int{1, 2, 3, 4, 5}
 	numbers0 := []int{0, 2, 3, 4, 5}
 	numbersMinus := []int{-1, -2, -3, -4, -5}
@@ -61,9 +61,3 @@ func ExampleGetOddSum(){
 	// 8
 	// -9
 }
-
-
-
-
-
-

@@ -48,7 +48,7 @@ func ReturnDivideFourRemainder(start int, end int) []int {
 		return remainders
 	}
 	for i := start; i <= end; i++ {
-		k := i%4
+		k := i % 4
 		remainders = append(remainders, k)
 	}
 	return remainders

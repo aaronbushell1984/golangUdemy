@@ -40,8 +40,8 @@ func ExampleGetSecondFirst() {
 func ExampleVocalSpeak() {
 	james := person{
 		first: "James",
-		last: "Bond",
-		age: 32,
+		last:  "Bond",
+		age:   32,
 	}
 	fmt.Println(VocalSpeak(james))
 	// Output:
@@ -49,10 +49,10 @@ func ExampleVocalSpeak() {
 }
 
 func ExampleGetArea() {
-	circle1 := circle {
+	circle1 := circle{
 		radius: 4,
 	}
-	square1 := square {
+	square1 := square{
 		length: 4,
 	}
 	fmt.Println(GetArea(circle1))
@@ -69,7 +69,7 @@ func ExampleGetStringAnonymousFunc() {
 }
 
 func ExampleAssignFuncToVariable() {
-	assigned :=  AssignFuncToVariable()
+	assigned := AssignFuncToVariable()
 	fmt.Println(assigned)
 	// Output:
 	// I was assigned to a variable and then called
@@ -87,7 +87,6 @@ func ExampleUsedInCallback() {
 	// Output:
 	// I will be used in a callback
 }
-
 
 func ExampleCallbackExample() {
 	fmt.Println(CallbackExample(UsedInCallback("was")))
@@ -108,18 +107,3 @@ func ExampleIterate() {
 	// 3
 	// 1
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
