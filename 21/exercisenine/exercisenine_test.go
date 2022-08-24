@@ -47,7 +47,7 @@ func ExampleRaceConditionIncrementorWithAtomic() {
 func ExampleGetOs() {
 	fmt.Println(GetOs())
 	// Output:
-	// linux
+	// windows
 }
 
 func ExampleGetArch() {
