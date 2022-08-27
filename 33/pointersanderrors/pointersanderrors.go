@@ -18,6 +18,7 @@ import (
 	"fmt"
 )
 
+// ErrInsufficientFunds is the global error to be used when a balance does not allow withdrawal
 var ErrInsufficientFunds = errors.New("insufficient funds")
 
 // Bitcoin is our own type of float64 to improve readability and allow our own implementation of standard library methods
@@ -57,6 +58,9 @@ func (w *Wallet) Balance() Bitcoin {
 	return w.balance
 }
 
+// Withdraw subtracts the amount from the balance of provided method receiver wallet address
+//
+// Withdrawing more than is available returns the insufficient funds error
 func (w *Wallet) Withdraw(amount Bitcoin) error {
 	if amount > w.balance {
 		return ErrInsufficientFunds
