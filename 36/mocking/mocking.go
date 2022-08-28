@@ -10,7 +10,7 @@ import (
 const (
 	countdownStart  = 3
 	finalWord       = "Go!"
-	ConfiguredSleep = 5 * time.Second
+	ConfiguredSleep = 1 * time.Second
 )
 
 // Sleeper defines behaviour to Sleep allowing a DefaultSleeper and ConfigurableSleeper

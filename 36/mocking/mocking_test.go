@@ -38,7 +38,8 @@ func TestCountdown(t *testing.T) {
 		spySleeper := &SpyCountdownOperations{}
 		Countdown(buffer, spySleeper)
 		got := buffer.String()
-		want := fmt.Sprintf("3\n2\n1\nGo!")
+		output := expectedOutput()
+		want := fmt.Sprintf(output)
 		if got != want {
 			t.Errorf("got: %q want %q", got, want)
 		}
@@ -46,15 +47,7 @@ func TestCountdown(t *testing.T) {
 	t.Run("sleep before every print", func(t *testing.T) {
 		spySleeperWriter := &SpyCountdownOperations{}
 		Countdown(spySleeperWriter, spySleeperWriter)
-		want := []string{
-			write,
-			sleep,
-			write,
-			sleep,
-			write,
-			sleep,
-			write,
-		}
+		want := expectedWriteSleepCalls()
 		if !reflect.DeepEqual(want, spySleeperWriter.Calls) {
 			t.Errorf("got: %q want %q", spySleeperWriter.Calls, want)
 		}
@@ -69,4 +62,23 @@ func TestConfigurableSleeper(t *testing.T) {
 	if spyTime.durationSlept != sleepTime {
 		t.Errorf("should have slept: %v but actually slept: %v", sleepTime, spyTime.durationSlept)
 	}
+}
+
+func expectedWriteSleepCalls() []string {
+	var want []string
+	for i := 0; i < countdownStart; i++ {
+		want = append(want, write)
+		want = append(want, sleep)
+	}
+	want = append(want, write)
+	return want
+}
+
+func expectedOutput() string {
+	var output string
+	for i := countdownStart; i > 0; i-- {
+		output += fmt.Sprintf("%v\n", i)
+	}
+	output += finalWord
+	return output
 }
