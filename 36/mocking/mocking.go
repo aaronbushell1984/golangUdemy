@@ -18,14 +18,6 @@ type Sleeper interface {
 	Sleep()
 }
 
-// DefaultSleeper is empty of fields but allows a method attachment
-type DefaultSleeper struct{}
-
-// Sleep attaches a Sleep of 1 second to receivers of DefaultSleeper
-func (d DefaultSleeper) Sleep() {
-	time.Sleep(1 * time.Second)
-}
-
 // ConfigurableSleeper exports Duration which is a time.duration and Sleeps which is function which accepts argument of time.duration
 //
 // Value of type ConfigurableSleeper implements sleep and therefore Sleeper interface
