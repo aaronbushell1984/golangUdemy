@@ -38,8 +38,7 @@ func TestCountdown(t *testing.T) {
 		spySleeper := &SpyCountdownOperations{}
 		Countdown(buffer, spySleeper)
 		got := buffer.String()
-		output := expectedOutput()
-		want := fmt.Sprintf(output)
+		want := fmt.Sprintf(expectedOutput())
 		if got != want {
 			t.Errorf("got: %q want %q", got, want)
 		}
