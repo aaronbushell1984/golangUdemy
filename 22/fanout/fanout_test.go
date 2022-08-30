@@ -27,7 +27,9 @@ func ExampleTimeConsumingWork() {
 }
 
 func BenchmarkTimeConsumingWork(b *testing.B) {
-	TimeConsumingWork(100)
+	for i := 0; i < b.N; i++ {
+		TimeConsumingWork(100)
+	}
 }
 
 func ExampleFanOutIn() {
@@ -58,11 +60,15 @@ func ExampleSequentialTimeConsumingWork() {
 }
 
 func BenchmarkConcurrentTimeConsumingWork(b *testing.B) {
-	ConcurrentTimeConsumingWork(100)
+	for i := 0; i < b.N; i++ {
+		ConcurrentTimeConsumingWork(100)
+	}
 }
 
 func BenchmarkSequentialTimeConsumingWork(b *testing.B) {
-	SequentialTimeConsumingWork(100)
+	for i := 0; i < b.N; i++ {
+		SequentialTimeConsumingWork(100)
+	}
 }
 
 func ExampleThrottleFanOutIn() {
@@ -87,5 +93,7 @@ func ExampleThrottleConcurrentTimeConsumingWork() {
 }
 
 func BenchmarkThrottleConcurrentTimeConsumingWork(b *testing.B) {
-	ThrottleConcurrentTimeConsumingWork(100, 10)
+	for i := 0; i < b.N; i++ {
+		ThrottleConcurrentTimeConsumingWork(100, 10)
+	}
 }

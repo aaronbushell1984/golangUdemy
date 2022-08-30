@@ -33,15 +33,20 @@ func TimeConsumingWork(value int) int {
 }
 
 // FanOutIn takes two channels:
+//
 //	(numberPopulateChannel, receiveChannel chan int)
-// The first to creates a number of channels using Populate
+//
+// # The first to creates a number of channels using Populate
 //
 // The second receives the output of TimeConsumingWork:
+//
 //	receiveChannel <- TimeConsumingWork(v2)
+//
 // For each channel previously populated a new channel is launched to receive this work:
+//
 //	for v := range numberPopulateChannel {
-// 		wg.Add(1)
-// 		go func(v2 int) {
+//		wg.Add(1)
+//		go func(v2 int) {
 //			receiveChannel <- TimeConsumingWork(v2)
 //			wg.Done()
 //		}(v)
@@ -75,11 +80,10 @@ func ConcurrentTimeConsumingWork(routines int) []int {
 
 // SequentialTimeConsumingWork is to compare the same task as ConcurrentTimeConsumingWork in a non concurrent pattern
 //
-// Output of benchmark tests on a 16 core processor show concurrency is faster:
-//	BenchmarkConcurrentTimeConsumingWork-16         1000000000               0.001441 ns/op
-//	ok      /golangUdemy/22/fanout       0.019s
-//	BenchmarkSequentialTimeConsumingWork-16         1000000000               0.08071 ns/op
-//	ok      /golangUdemy/22/fanout       0.745s
+// Output of benchmark tests on an 8 core processor show concurrency is faster:
+//
+//	BenchmarkConcurrentTimeConsumingWork-8         100               14998520 ns/op
+//	BenchmarkSequentialTimeConsumingWork-8         1               1392384200 ns/op
 func SequentialTimeConsumingWork(count int) []int {
 	var numbers []int
 	for i := 1; i < count; i++ {
@@ -111,10 +115,9 @@ func ThrottleFanOutIn(numberPopulateChannel chan int, receiveChannel chan int, t
 // ThrottleConcurrentTimeConsumingWork is to compare with ConcurrentTimeConsumingWork when routines are throttled
 //
 // Benchmark tests show that reducing the amount of routines for this process can be faster:
-//	BenchmarkConcurrentTimeConsumingWork-16         1000000000               0.001441 ns/op
-//	ok      /golangUdemy/22/fanout       0.019s
-//	BenchmarkThrottleConcurrentTimeConsumingWork-16         1000000000               0.001249 ns/op
-//	ok      /golangUdemy/22/fanout       0.015s
+//
+//	BenchmarkConcurrentTimeConsumingWork-8         100               14998520 ns/op
+//	BenchmarkThrottleConcurrentTimeConsumingWork-8        1503448 		88 ns/op
 func ThrottleConcurrentTimeConsumingWork(count int, throttle int) []int {
 	var numbers []int
 	numberPopulateChannel := make(chan int)

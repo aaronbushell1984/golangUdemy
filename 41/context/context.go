@@ -1,3 +1,4 @@
+// Package context demonstrates use of context to propagate cancellation of go routines
 package context
 
 import (

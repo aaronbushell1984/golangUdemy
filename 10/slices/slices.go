@@ -24,6 +24,7 @@ func GetFromSliceByIndex(sliceOfInt []int, index int) int {
 // GetAllFromSlice returns all integers from slice as a string
 //
 // Demonstrates use of a "for range" which discards index:
+//
 //	for _, v := range sliceOfInt {
 //		result = append(result, v)
 //	}
@@ -36,7 +37,9 @@ func GetAllFromSlice(sliceOfInt []int) string {
 // GetSliceOfSlice returns a portion of a slice
 //
 // N.B. Indexes start at 0 -- AND
+//
 //	[start:startOfEnd]
+//
 // may not be intuitive
 func GetSliceOfSlice(slice []int, start int, startOfEnd int) []int {
 	return slice[start:startOfEnd]
@@ -45,11 +48,17 @@ func GetSliceOfSlice(slice []int, start int, startOfEnd int) []int {
 // GetAppendedSlices returns the second slice appended to the end of the first
 //
 // Uses:
+//
 //	...
+//
 // Which unpacks slice2:
+//
 //	append(slice1, slice2...)
+//
 // Not be confused with:
+//
 //	...T
+//
 // Which in a function signature is a variadic parameter meaning, it can accept any number of arguments of the given type.
 func GetAppendedSlices(slice1 []int, slice2 []int) []int {
 	return append(slice1, slice2...)
@@ -75,17 +84,24 @@ func GetLengthOfSlice(slice []int) int {
 // GetAppendedSlice returns a slice appended with any number of added int values
 //
 //	func BenchmarkGetAppendedSlice(b *testing.B) {
-//		slice := []int{0, 1, 2, 3, 4, 5, 6}
-//		GetAppendedSlice(slice, 6, 9, 9, 1000)
+//		for i := 0; i < b.N; i++ {
+//			slice := []int{0, 1, 2, 3, 4, 5, 6}
+//			GetAppendedSlice(slice, 6, 9, 9, 1000)
+//		}
 //	}
-// Runs in 0.0000008 ns/op
-//	func BenchmarkGetAppendedMadeSlice(b *testing.B) {
-//		madeSlice := make([]int, 7, 11)
-//		GetAppendedSlice(madeSlice, 6, 9, 9, 1000)
-//	}
-// Runs in 0.0000001 ns/op
 //
-// Appending to a slice is possible
+// Runs in 54.37 ns/op
+//
+//	func BenchmarkGetAppendedMadeSlice(b *testing.B) {
+//		for i := 0; i < b.N; i++ {
+//			madeSlice := make([]int, 7, 11)
+//			GetAppendedSlice(madeSlice, 6, 9, 9, 1000)
+//		}
+//	}
+//
+// Runs in 0.3670 ns/op
+//
+// # Appending to a slice is possible
 //
 // Making a slice with enough capacity for later appends is faster
 func GetAppendedSlice(slice []int, number ...int) []int {
@@ -95,10 +111,15 @@ func GetAppendedSlice(slice []int, number ...int) []int {
 // GetCombinedMultiDimensionalSlices combines any number of slices into a multi-dimensional slice
 //
 // Generic V is used to allow []string or []int:
+//
 //	GetCombinedMultiDimensionalSlices[V []string | []int]
+//
 // Variadic parameter ... allows any number of the type V:
+//
 //	(slice ...V)
+//
 // Return type is set to a slice of V which is a slice and therefore [][] (multi-dimensional)
+//
 //	[]V
 func GetCombinedMultiDimensionalSlices[V []string | []int](slice ...V) []V {
 	return slice

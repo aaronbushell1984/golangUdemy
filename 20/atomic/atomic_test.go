@@ -12,5 +12,7 @@ func ExampleRaceConditionCountWithAtomic() {
 }
 
 func BenchmarkRaceConditionCountWithAtomic(b *testing.B) {
-	RaceConditionCountWithAtomic()
+	for i := 0; i < b.N; i++ {
+		RaceConditionCountWithAtomic()
+	}
 }

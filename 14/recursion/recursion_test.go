@@ -18,7 +18,9 @@ func ExampleGetRecursiveFactorial() {
 }
 
 func BenchmarkGetRecursiveFactorial(b *testing.B) {
-	GetRecursiveFactorial(100)
+	for i := 0; i < b.N; i++ {
+		GetRecursiveFactorial(100)
+	}
 }
 
 func ExampleGetLoopFactorial() {
@@ -34,5 +36,7 @@ func ExampleGetLoopFactorial() {
 }
 
 func BenchmarkGetLoopFactorial(b *testing.B) {
-	GetLoopFactorial(100)
+	for i := 0; i < b.N; i++ {
+		GetLoopFactorial(100)
+	}
 }

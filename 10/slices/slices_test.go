@@ -85,13 +85,17 @@ func ExampleGetLengthOfSlice() {
 }
 
 func BenchmarkGetAppendedSlice(b *testing.B) {
-	slice := []int{0, 1, 2, 3, 4, 5, 6}
-	GetAppendedSlice(slice, 6, 9, 9, 1000)
+	for i := 0; i < b.N; i++ {
+		slice := []int{0, 1, 2, 3, 4, 5, 6}
+		GetAppendedSlice(slice, 6, 9, 9, 1000)
+	}
 }
 
 func BenchmarkGetAppendedMadeSlice(b *testing.B) {
-	madeSlice := make([]int, 7, 11)
-	GetAppendedSlice(madeSlice, 6, 9, 9, 1000)
+	for i := 0; i < b.N; i++ {
+		madeSlice := make([]int, 7, 11)
+		GetAppendedSlice(madeSlice, 6, 9, 9, 1000)
+	}
 }
 
 func ExampleGetAppendedSlice() {
