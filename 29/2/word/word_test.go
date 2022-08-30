@@ -43,19 +43,15 @@ func ExampleUseCount() {
 
 func TestName(t *testing.T) {
 	s := "    A   Tricky   Case  Don't you know...    "
-	got := Count(s)
-	want := 6
-	if got != want {
-		t.Errorf("got: %d want: %d", got, want)
-	}
+	assertCount(t, Count(s), 6)
 }
 
 func TestUseCount(t *testing.T) {
 	s := " Written   Once Written Twice Written Thrice  written again  "
 	t.Run("three case sensitive words repeated returns 3", func(t *testing.T) {
 		wordsMap := UseCount(s)
-		gotWritten := wordsMap["Written"]
-		assertCount(t, gotWritten, 3)
+		got := wordsMap["Written"]
+		assertCount(t, got, 3)
 	})
 	t.Run("lower case word present once", func(t *testing.T) {
 		wordsMap := UseCount(s)
