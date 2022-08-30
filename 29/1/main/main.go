@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/aaronbushell1984/golangUdemy/29/dog"
+	"github.com/aaronbushell1984/golangUdemy/29/1/dog"
 )
 
 type canine struct {
