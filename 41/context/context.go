@@ -21,7 +21,7 @@ func Server(store Store) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		data, err := store.Fetch(r.Context())
 		if err != nil {
-			log.Println("error fetching from store")
+			return
 		}
 		_, err = fmt.Fprint(w, data)
 		if err != nil {

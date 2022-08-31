@@ -16,13 +16,13 @@ func ExampleGetArchitecture() {
 func ExampleGetOs() {
 	fmt.Println(GetOs())
 	// Output:
-	// linux
+	// windows
 }
 
 func ExampleGetNumberOfCpus() {
 	fmt.Println(GetNumberOfCpus())
 	// Output:
-	// 16
+	// 8
 }
 
 func ExampleGetNumberOfGoRoutines() {
